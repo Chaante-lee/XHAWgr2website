@@ -1228,3 +1228,47 @@ img {
     flex-direction: column;
   }
 }
+
+/* CONTACT FORM ERROR HANDLING */
+.form-group {
+  width: 100%;
+}
+
+.contact-form-card input.input-error,
+.contact-form-card select.input-error,
+.contact-form-card textarea.input-error {
+  border: 2px solid #dc2626;
+  background: #fff7f7;
+}
+
+.error-message {
+  display: block;
+  min-height: 18px;
+  margin-top: 6px;
+  color: #dc2626;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.form-status {
+  display: none;
+  margin-top: 16px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.form-status.success {
+  display: block;
+  background: #ecfdf3;
+  color: #027a48;
+  border: 1px solid #abe7c7;
+}
+
+.form-status.error {
+  display: block;
+  background: #fff7f7;
+  color: #dc2626;
+  border: 1px solid #fecaca;
+}

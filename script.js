@@ -84,3 +84,126 @@ document.addEventListener("DOMContentLoaded", () => {
   checkboxes.forEach((box) => box.addEventListener("change", updateQuote));
   updateQuote();
 });
+
+// Contact form validation and error handling
+(function () {
+  const form = document.getElementById("contact-form");
+  if (!form) return;
+
+  const fields = {
+    fullName: document.getElementById("fullName"),
+    email: document.getElementById("email"),
+    phone: document.getElementById("phone"),
+    message: document.getElementById("message"),
+  };
+
+  const errors = {
+    fullName: document.getElementById("fullNameError"),
+    email: document.getElementById("emailError"),
+    phone: document.getElementById("phoneError"),
+    message: document.getElementById("messageError"),
+  };
+
+  const statusBox = document.getElementById("formStatus");
+
+  function setError(fieldName, message) {
+    const field = fields[fieldName];
+    const error = errors[fieldName];
+    if (!field || !error) return;
+
+    field.classList.add("input-error");
+    error.textContent = message;
+  }
+
+  function clearError(fieldName) {
+    const field = fields[fieldName];
+    const error = errors[fieldName];
+    if (!field || !error) return;
+
+    field.classList.remove("input-error");
+    error.textContent = "";
+  }
+
+  function showStatus(type, message) {
+    if (!statusBox) return;
+    statusBox.className = `form-status ${type}`;
+    statusBox.textContent = message;
+  }
+
+  function clearStatus() {
+    if (!statusBox) return;
+    statusBox.className = "form-status";
+    statusBox.textContent = "";
+  }
+
+  function isValidEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
+
+  function isValidPhone(phone) {
+    const cleaned = phone.replace(/\s/g, "");
+    return /^(\+27|0)[0-9]{9}$/.test(cleaned);
+  }
+
+  function validateForm() {
+    let isValid = true;
+    clearStatus();
+
+    Object.keys(errors).forEach(clearError);
+
+    if (!fields.fullName.value.trim()) {
+      setError("fullName", "Please enter your full name.");
+      isValid = false;
+    } else if (fields.fullName.value.trim().length < 3) {
+      setError("fullName", "Full name must be at least 3 characters.");
+      isValid = false;
+    }
+
+    if (!fields.email.value.trim()) {
+      setError("email", "Please enter your email address.");
+      isValid = false;
+    } else if (!isValidEmail(fields.email.value.trim())) {
+      setError("email", "Please enter a valid email address.");
+      isValid = false;
+    }
+
+    if (!fields.phone.value.trim()) {
+      setError("phone", "Please enter your phone number.");
+      isValid = false;
+    } else if (!isValidPhone(fields.phone.value.trim())) {
+      setError("phone", "Use a valid SA number, e.g. +27 12 345 6789 or 0123456789.");
+      isValid = false;
+    }
+
+    if (!fields.message.value.trim()) {
+      setError("message", "Please enter your message.");
+      isValid = false;
+    } else if (fields.message.value.trim().length < 10) {
+      setError("message", "Message must be at least 10 characters.");
+      isValid = false;
+    }
+
+    return isValid;
+  }
+
+  Object.keys(fields).forEach((fieldName) => {
+    const field = fields[fieldName];
+    if (!field) return;
+    field.addEventListener("input", () => {
+      clearError(fieldName);
+      clearStatus();
+    });
+  });
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    if (!validateForm()) {
+      showStatus("error", "Please fix the highlighted fields before sending.");
+      return;
+    }
+
+    showStatus("success", "Thank you! Your message has been validated successfully.");
+    form.reset();
+  });
+})();
