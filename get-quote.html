@@ -21,10 +21,7 @@
 
   <header class="main-header">
     <div class="container nav-wrap">
-      <div class="logo-area">
-        <img src="images/logo.png" alt="Empowering the Nation Logo" class="logo-img" />
-      </div>
-
+      <div class="logo-area"><img src="images/logo.png" alt="Empowering the Nation Logo" class="logo-img" /></div>
       <nav class="main-nav">
         <a href="index.html" class="nav-link">Home</a>
         <a href="training-programs.html" class="nav-link">Courses</a>
@@ -34,41 +31,127 @@
     </div>
   </header>
 
-  <section class="simple-page">
-    <div class="container simple-page-box">
-      <h1>Get Quote</h1>
-      <p>
-        This page will be used for the quote calculator.
-      </p>
-      <p>
-        Next, we can build the course selection form, discount logic, VAT calculation,
-        and total amount section.
-      </p>
-    </div>
-  </section>
+  <main class="quote-page">
+    <section class="quote-title container">
+      <div class="quote-title-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="5" y="2" width="14" height="20" rx="2"></rect>
+          <path d="M8 6h8"></path>
+          <circle cx="9" cy="11" r="1"></circle>
+          <circle cx="12" cy="11" r="1"></circle>
+          <circle cx="15" cy="11" r="1"></circle>
+          <circle cx="9" cy="15" r="1"></circle>
+          <circle cx="12" cy="15" r="1"></circle>
+          <circle cx="15" cy="15" r="1"></circle>
+          <circle cx="9" cy="19" r="1"></circle>
+          <circle cx="12" cy="19" r="1"></circle>
+          <circle cx="15" cy="19" r="1"></circle>
+        </svg>
+      </div>
+      <h1>Course Quote Calculator</h1>
+      <p>Select the courses you're interested in and see your personalized quote with automatic bulk discounts applied.</p>
+    </section>
+
+    <section class="container quote-layout">
+      <div class="quote-card course-select-card">
+        <h2>Select Your Courses</h2>
+        <p>Choose one or more courses to get started. Discounts are automatically applied for multiple courses.</p>
+
+        <div class="quote-discount-banner">
+          <strong>ⓘ Bulk Discounts:</strong>
+          <span>2 courses = 5% off • 3 courses = 10% off • 4+ courses = 15% off</span>
+        </div>
+
+        <div class="course-select-group">
+          <div class="quote-section-heading">
+            <h3>6-Month Intensive Courses</h3>
+            <span>R1,500 each</span>
+          </div>
+
+          <label class="quote-course-row">
+            <input type="checkbox" class="course-checkbox" data-name="First Aid" data-duration="6 Months" data-price="1500" />
+            <span class="quote-course-name">First Aid <small>6 Months</small></span>
+            <strong>R1,500</strong>
+          </label>
+
+          <label class="quote-course-row">
+            <input type="checkbox" class="course-checkbox" data-name="Sewing" data-duration="6 Months" data-price="1500" />
+            <span class="quote-course-name">Sewing <small>6 Months</small></span>
+            <strong>R1,500</strong>
+          </label>
+
+          <label class="quote-course-row">
+            <input type="checkbox" class="course-checkbox" data-name="Landscaping" data-duration="6 Months" data-price="1500" />
+            <span class="quote-course-name">Landscaping <small>6 Months</small></span>
+            <strong>R1,500</strong>
+          </label>
+
+          <label class="quote-course-row">
+            <input type="checkbox" class="course-checkbox" data-name="Life Skills" data-duration="6 Months" data-price="1500" />
+            <span class="quote-course-name">Life Skills <small>6 Months</small></span>
+            <strong>R1,500</strong>
+          </label>
+        </div>
+
+        <div class="course-select-group">
+          <div class="quote-section-heading">
+            <h3>6-Week Short Courses</h3>
+            <span>R750 each</span>
+          </div>
+
+          <label class="quote-course-row">
+            <input type="checkbox" class="course-checkbox" data-name="Child Minding" data-duration="6 Weeks" data-price="750" />
+            <span class="quote-course-name">Child Minding <small>6 Weeks</small></span>
+            <strong>R750</strong>
+          </label>
+
+          <label class="quote-course-row">
+            <input type="checkbox" class="course-checkbox" data-name="Cooking" data-duration="6 Weeks" data-price="750" />
+            <span class="quote-course-name">Cooking <small>6 Weeks</small></span>
+            <strong>R750</strong>
+          </label>
+
+          <label class="quote-course-row">
+            <input type="checkbox" class="course-checkbox" data-name="Garden Maintenance" data-duration="6 Weeks" data-price="750" />
+            <span class="quote-course-name">Garden Maintenance <small>6 Weeks</small></span>
+            <strong>R750</strong>
+          </label>
+        </div>
+      </div>
+
+      <aside class="quote-summary-card">
+        <div class="quote-summary-header">
+          <h2>Your Quote</h2>
+          <p><span id="selected-count">0</span> courses selected</p>
+        </div>
+
+        <div class="quote-summary-body" id="quote-summary-body">
+          <div class="empty-quote-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="5" y="2" width="14" height="20" rx="2"></rect>
+              <path d="M8 6h8"></path>
+              <circle cx="9" cy="11" r="1"></circle>
+              <circle cx="12" cy="11" r="1"></circle>
+              <circle cx="15" cy="11" r="1"></circle>
+              <circle cx="9" cy="15" r="1"></circle>
+              <circle cx="12" cy="15" r="1"></circle>
+              <circle cx="15" cy="15" r="1"></circle>
+            </svg>
+          </div>
+          <p class="empty-quote-text">Select courses to see your quote</p>
+        </div>
+      </aside>
+    </section>
+  </main>
 
   <footer class="site-footer">
     <div class="container footer-grid">
-      <div class="footer-logo">
-        <img src="images/logo.png" alt="Empowering the Nation Logo" />
-      </div>
-
-      <div class="footer-links">
-        <h4>Quick Links</h4>
-        <a href="index.html">Home</a>
-        <a href="training-programs.html">Courses</a>
-        <a href="get-quote.html">Get Quote</a>
-        <a href="contact.html">Contact</a>
-      </div>
-
-      <div class="footer-contact">
-        <h4>Contact Us</h4>
-        <p>123 Training Street</p>
-        <p>Johannesburg, South Africa</p>
-        <p>+27 12 345 6789</p>
-        <p>info@empoweringthenation.co.za</p>
-      </div>
+      <div class="footer-about"><img src="images/logo.png" alt="Empowering the Nation Logo" class="footer-logo-img" /><p>Empowering the Nation provides quality training programs for unemployed individuals, domestic workers, and gardeners to develop essential skills for better employment opportunities.</p></div>
+      <div class="footer-links"><h4>Quick Links</h4><a href="index.html">Home</a><a href="training-programs.html">Courses</a><a href="get-quote.html">Get Quote</a><a href="contact.html">Contact</a></div>
+      <div class="footer-contact"><h4>Contact Us</h4><p>1 Eloff Street</p><p>Johannesburg, 2001</p><p>South Africa</p><p>+27 12 345 6789</p><p>info@empoweringthenation.co.za</p></div>
+      <div class="footer-map"><h4>Find Us</h4><div class="map-frame"><iframe src="https://www.google.com/maps?q=1%20Eloff%20Street%2C%20Johannesburg&z=15&output=embed" loading="lazy"></iframe></div></div>
     </div>
+    <div class="container footer-bottom"><p>© 2026 Empowering the Nation. All rights reserved.</p></div>
   </footer>
 
   <script src="script.js"></script>

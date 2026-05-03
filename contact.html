@@ -9,67 +9,58 @@
 <body>
   <div class="top-bar">
     <div class="container top-bar-inner">
-      <div class="top-left">
-        <span>📞 +27 12 345 6789</span>
-        <span>✉ info@empoweringthenation.co.za</span>
-      </div>
-      <div class="top-right">
-        <span>Empowering Communities Through Education</span>
-      </div>
+      <div class="top-left"><span>📞 +27 12 345 6789</span><span>✉ info@empoweringthenation.co.za</span></div>
+      <div class="top-right"><span>Empowering Communities Through Education</span></div>
     </div>
   </div>
 
   <header class="main-header">
     <div class="container nav-wrap">
-      <div class="logo-area">
-        <img src="images/logo.png" alt="Empowering the Nation Logo" class="logo-img" />
-      </div>
-
-      <nav class="main-nav">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="training-programs.html" class="nav-link">Courses</a>
-        <a href="get-quote.html" class="nav-link">Get Quote</a>
-        <a href="contact.html" class="nav-link active">Contact</a>
-      </nav>
+      <div class="logo-area"><img src="images/logo.png" alt="Empowering the Nation Logo" class="logo-img" /></div>
+      <nav class="main-nav"><a href="index.html" class="nav-link">Home</a><a href="training-programs.html" class="nav-link">Courses</a><a href="get-quote.html" class="nav-link">Get Quote</a><a href="contact.html" class="nav-link active">Contact</a></nav>
     </div>
   </header>
 
-  <section class="simple-page">
-    <div class="container simple-page-box">
-      <h1>Contact</h1>
-      <p>Phone: +27 12 345 6789</p>
-      <p>Email: info@empoweringthenation.co.za</p>
-      <p>Address: 123 Training Street, Johannesburg, South Africa</p>
-      <p>
-        Next, we can build the contact form and dropdown exactly like your wireframe.
-      </p>
-    </div>
-  </section>
+  <main class="contact-page">
+    <section class="contact-title container">
+      <h1>Contact Us</h1>
+      <p>Have questions about our courses? Need more information? We're here to help! Fill out the form below or use our contact details to get in touch.</p>
+    </section>
+
+    <section class="container contact-layout">
+      <div class="contact-form-card">
+        <h2>Request Information</h2>
+        <p>Fill out the form and we'll get back to you within 24 hours</p>
+        <form>
+          <label>Full Name *</label><input type="text" placeholder="Enter your full name" />
+          <div class="form-two"><div><label>Email Address *</label><input type="email" placeholder="your.email@example.com" /></div><div><label>Phone Number *</label><input type="tel" placeholder="+27 XX XXX XXXX" /></div></div>
+          <label>Course Interest</label><select><option>Select a course</option><option>First Aid</option><option>Sewing</option><option>Landscaping</option><option>Life Skills</option><option>Child Minding</option><option>Cooking</option><option>Garden Maintenance</option></select>
+          <label>Message *</label><textarea placeholder="Tell us about your training needs, questions, or any specific requirements..."></textarea>
+          <button type="button" class="btn btn-primary form-btn">✈ Send Message</button>
+        </form>
+      </div>
+
+      <aside class="contact-side">
+        <div class="side-card"><h3>Get In Touch</h3><p class="side-subtitle">Our contact information</p><h4>Phone</h4><p>+27 12 345 6789</p><h4>Email</h4><p>info@empoweringthenation.co.za</p><h4>Address</h4><p>1 Eloff Street<br>Johannesburg, 2001<br>South Africa</p></div>
+        <div class="side-card"><h3>Office Hours</h3><p><strong>Monday - Friday</strong> 8:00 AM - 5:00 PM</p><p><strong>Saturday</strong> 9:00 AM - 1:00 PM</p><p><strong>Sunday</strong> Closed</p></div>
+        <div class="side-card dark-card"><h3>Why Choose Us?</h3><ul><li>Certified training programs</li><li>Experienced instructors</li><li>Affordable pricing</li><li>Bulk discounts available</li><li>Hands-on practical training</li></ul></div>
+      </aside>
+    </section>
+
+    <section class="container find-us-card">
+      <h2>Find Us</h2><p>Visit our training centre in Johannesburg</p>
+      <div class="large-map"><iframe src="https://www.google.com/maps?q=1%20Eloff%20Street%2C%20Johannesburg&z=15&output=embed" loading="lazy"></iframe></div>
+    </section>
+  </main>
 
   <footer class="site-footer">
     <div class="container footer-grid">
-      <div class="footer-logo">
-        <img src="images/logo.png" alt="Empowering the Nation Logo" />
-      </div>
-
-      <div class="footer-links">
-        <h4>Quick Links</h4>
-        <a href="index.html">Home</a>
-        <a href="training-programs.html">Courses</a>
-        <a href="get-quote.html">Get Quote</a>
-        <a href="contact.html">Contact</a>
-      </div>
-
-      <div class="footer-contact">
-        <h4>Contact Us</h4>
-        <p>123 Training Street</p>
-        <p>Johannesburg, South Africa</p>
-        <p>+27 12 345 6789</p>
-        <p>info@empoweringthenation.co.za</p>
-      </div>
+      <div class="footer-about"><img src="images/logo.png" alt="Empowering the Nation Logo" class="footer-logo-img" /><p>Empowering the Nation provides quality training programs for unemployed individuals, domestic workers, and gardeners to develop essential skills for better employment opportunities.</p></div>
+      <div class="footer-links"><h4>Quick Links</h4><a href="index.html">Home</a><a href="training-programs.html">Courses</a><a href="get-quote.html">Get Quote</a><a href="contact.html">Contact</a></div>
+      <div class="footer-contact"><h4>Contact Us</h4><p>1 Eloff Street</p><p>Johannesburg, 2001</p><p>South Africa</p><p>+27 12 345 6789</p><p>info@empoweringthenation.co.za</p></div>
+      <!--<div class="footer-map"><h4>Find Us</h4><div class="map-frame"><iframe src="https://www.google.com/maps?q=1%20Eloff%20Street%2C%20Johannesburg&z=15&output=embed" loading="lazy"></iframe></div></div>-->
     </div>
+    <div class="container footer-bottom"><p>© 2026 Empowering the Nation. All rights reserved.</p></div>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
