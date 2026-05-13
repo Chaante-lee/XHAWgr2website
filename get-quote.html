@@ -1,42 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Empowering the Nation | Get Quote</title>
-  <link rel="stylesheet" href="style.css" />
+<html lang="en" id="html-root">
+<head id="head-section">
+  <meta charset="UTF-8" id="meta-charset" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" id="meta-viewport" />
+  <title id="page-title">Empowering the Nation | Get Quote</title>
+  <link rel="stylesheet" href="style.css" id="main-stylesheet" />
 </head>
-<body>
-  <div class="top-bar">
-    <div class="container top-bar-inner">
-      <div class="top-left">
-        <span>📞 +27 12 345 6789</span>
-        <span>✉ info@empoweringthenation.co.za</span>
+<body id="body-page">
+  <div class="top-bar" id="top-bar">
+    <div class="container top-bar-inner" id="top-bar-inner">
+      <div class="top-left" id="top-left">
+        <span id="contact-phone">📞 +27 12 345 6789</span>
+        <span id="contact-email">✉ info@empoweringthenation.co.za</span>
       </div>
-      <div class="top-right">
-        <span>Empowering Communities Through Education</span>
+      <div class="top-right" id="top-right">
+        <span id="tagline">Empowering Communities Through Education</span>
       </div>
     </div>
   </div>
 
-  <header class="main-header">
-    <div class="container nav-wrap">
-      <div class="logo-area"><img src="images/logo.png" alt="Empowering the Nation Logo" class="logo-img" /></div>
-      <nav class="main-nav">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="training-programs.html" class="nav-link">Courses</a>
-        <a href="get-quote.html" class="nav-link active">Get Quote</a>
-        <a href="contact.html" class="nav-link">Contact</a>
+  <header class="main-header" id="main-header">
+    <div class="container nav-wrap" id="nav-wrap">
+      <div class="logo-area" id="logo-area">
+        <img src="images/logo.png" alt="Empowering the Nation Logo" class="logo-img" id="logo-img" />
+      </div>
+      <nav class="main-nav" id="main-nav">
+        <a href="index.html" class="nav-link" id="nav-home">Home</a>
+        <a href="training-programs.html" class="nav-link" id="nav-courses">Courses</a>
+        <a href="get-quote.html" class="nav-link active" id="nav-quote">Get Quote</a>
+        <a href="contact.html" class="nav-link" id="nav-contact">Contact</a>
       </nav>
+
+         <select id="language">
+      <option value="en">English</option>
+      <option value="zu">Zulu</option>
+      <option value="xh">Xhosa</option>
+      <option value="af">Afrikaans</option>
+      <option value="st">Sesotho</option>
+    </select>
+
     </div>
   </header>
 
-  <main class="quote-page">
-    <section class="quote-title container">
-      <div class="quote-title-icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="5" y="2" width="14" height="20" rx="2"></rect>
-          <path d="M8 6h8"></path>
+  <main class="quote-page" id="quote-page">
+    <section class="quote-title container" id="quote-title">
+      <div class="quote-title-icon" id="quote-title-icon" aria-hidden="true">
+        <svg id="quote-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <rect id="icon-rect" x="5" y="2" width="14" height="20" rx="2"></rect>
+          <path id="icon-line" d="M8 6h8"></path>
           <circle cx="9" cy="11" r="1"></circle>
           <circle cx="12" cy="11" r="1"></circle>
           <circle cx="15" cy="11" r="1"></circle>
@@ -48,86 +59,86 @@
           <circle cx="15" cy="19" r="1"></circle>
         </svg>
       </div>
-      <h1>Course Quote Calculator</h1>
-      <p>Select the courses you're interested in and see your personalized quote with automatic bulk discounts applied.</p>
+      <h1 id="quote-heading">Course Quote Calculator</h1>
+      <p id="quote-description">Select the courses you're interested in and see your personalized quote with automatic bulk discounts applied.</p>
     </section>
 
-    <section class="container quote-layout">
-      <div class="quote-card course-select-card">
-        <h2>Select Your Courses</h2>
-        <p>Choose one or more courses to get started. Discounts are automatically applied for multiple courses.</p>
+    <section class="container quote-layout" id="quote-layout">
+      <div class="quote-card course-select-card" id="course-select-card">
+        <h2 id="select-heading">Select Your Courses</h2>
+        <p id="select-description">Choose one or more courses to get started. Discounts are automatically applied for multiple courses.</p>
 
-        <div class="quote-discount-banner">
-          <strong>ⓘ Bulk Discounts:</strong>
-          <span>2 courses = 5% off • 3 courses = 10% off • 4+ courses = 15% off</span>
+        <div class="quote-discount-banner" id="discount-banner">
+          <strong id="discount-title">ⓘ Bulk Discounts:</strong>
+          <span id="discount-info">2 courses = 5% off • 3 courses = 10% off • 4+ courses = 15% off</span>
         </div>
 
-        <div class="course-select-group">
-          <div class="quote-section-heading">
-            <h3>6-Month Intensive Courses</h3>
-            <span>R1,500 each</span>
+        <div class="course-select-group" id="group-intensive">
+          <div class="quote-section-heading" id="intensive-heading">
+            <h3 id="intensive-title">6-Month Intensive Courses</h3>
+            <span id="intensive-price">R1,500 each</span>
           </div>
 
-          <label class="quote-course-row">
-            <input type="checkbox" class="course-checkbox" data-name="First Aid" data-duration="6 Months" data-price="1500" />
+          <label class="quote-course-row" id="course-first-aid">
+            <input type="checkbox" class="course-checkbox" id="checkbox-first-aid" data-name="First Aid" data-duration="6 Months" data-price="1500" />
             <span class="quote-course-name">First Aid <small>6 Months</small></span>
             <strong>R1,500</strong>
           </label>
 
-          <label class="quote-course-row">
-            <input type="checkbox" class="course-checkbox" data-name="Sewing" data-duration="6 Months" data-price="1500" />
+          <label class="quote-course-row" id="course-sewing">
+            <input type="checkbox" class="course-checkbox" id="checkbox-sewing" data-name="Sewing" data-duration="6 Months" data-price="1500" />
             <span class="quote-course-name">Sewing <small>6 Months</small></span>
             <strong>R1,500</strong>
           </label>
 
-          <label class="quote-course-row">
-            <input type="checkbox" class="course-checkbox" data-name="Landscaping" data-duration="6 Months" data-price="1500" />
+          <label class="quote-course-row" id="course-landscaping">
+            <input type="checkbox" class="course-checkbox" id="checkbox-landscaping" data-name="Landscaping" data-duration="6 Months" data-price="1500" />
             <span class="quote-course-name">Landscaping <small>6 Months</small></span>
             <strong>R1,500</strong>
           </label>
 
-          <label class="quote-course-row">
-            <input type="checkbox" class="course-checkbox" data-name="Life Skills" data-duration="6 Months" data-price="1500" />
+          <label class="quote-course-row" id="course-life-skills">
+            <input type="checkbox" class="course-checkbox" id="checkbox-life-skills" data-name="Life Skills" data-duration="6 Months" data-price="1500" />
             <span class="quote-course-name">Life Skills <small>6 Months</small></span>
             <strong>R1,500</strong>
           </label>
         </div>
 
-        <div class="course-select-group">
-          <div class="quote-section-heading">
-            <h3>6-Week Short Courses</h3>
-            <span>R750 each</span>
+        <div class="course-select-group" id="group-short">
+          <div class="quote-section-heading" id="short-heading">
+            <h3 id="short-title">6-Week Short Courses</h3>
+            <span id="short-price">R750 each</span>
           </div>
 
-          <label class="quote-course-row">
-            <input type="checkbox" class="course-checkbox" data-name="Child Minding" data-duration="6 Weeks" data-price="750" />
+          <label class="quote-course-row" id="course-child-minding">
+            <input type="checkbox" class="course-checkbox" id="checkbox-child-minding" data-name="Child Minding" data-duration="6 Weeks" data-price="750" />
             <span class="quote-course-name">Child Minding <small>6 Weeks</small></span>
             <strong>R750</strong>
           </label>
 
-          <label class="quote-course-row">
-            <input type="checkbox" class="course-checkbox" data-name="Cooking" data-duration="6 Weeks" data-price="750" />
+          <label class="quote-course-row" id="course-cooking">
+            <input type="checkbox" class="course-checkbox" id="checkbox-cooking" data-name="Cooking" data-duration="6 Weeks" data-price="750" />
             <span class="quote-course-name">Cooking <small>6 Weeks</small></span>
             <strong>R750</strong>
           </label>
 
-          <label class="quote-course-row">
-            <input type="checkbox" class="course-checkbox" data-name="Garden Maintenance" data-duration="6 Weeks" data-price="750" />
+          <label class="quote-course-row" id="course-garden">
+            <input type="checkbox" class="course-checkbox" id="checkbox-garden" data-name="Garden Maintenance" data-duration="6 Weeks" data-price="750" />
             <span class="quote-course-name">Garden Maintenance <small>6 Weeks</small></span>
             <strong>R750</strong>
           </label>
         </div>
       </div>
 
-      <aside class="quote-summary-card">
-        <div class="quote-summary-header">
-          <h2>Your Quote</h2>
+      <aside class="quote-summary-card" id="quote-summary-card">
+        <div class="quote-summary-header" id="summary-header">
+          <h2 id="summary-title">Your Quote</h2>
           <p><span id="selected-count">0</span> courses selected</p>
         </div>
 
         <div class="quote-summary-body" id="quote-summary-body">
-          <div class="empty-quote-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <div class="empty-quote-icon" id="empty-icon" aria-hidden="true">
+            <svg id="empty-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
               <rect x="5" y="2" width="14" height="20" rx="2"></rect>
               <path d="M8 6h8"></path>
               <circle cx="9" cy="11" r="1"></circle>
@@ -138,22 +149,113 @@
               <circle cx="15" cy="15" r="1"></circle>
             </svg>
           </div>
-          <p class="empty-quote-text">Select courses to see your quote</p>
+          <p class="empty-quote-text" id="empty-text">Select courses to see your quote</p>
         </div>
       </aside>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div class="footer-about"><img src="images/logo.png" alt="Empowering the Nation Logo" class="footer-logo-img" /><p>Empowering the Nation provides quality training programs for unemployed individuals, domestic workers, and gardeners to develop essential skills for better employment opportunities.</p></div>
-      <div class="footer-links"><h4>Quick Links</h4><a href="index.html">Home</a><a href="training-programs.html">Courses</a><a href="get-quote.html">Get Quote</a><a href="contact.html">Contact</a></div>
-      <div class="footer-contact"><h4>Contact Us</h4><p>1 Eloff Street</p><p>Johannesburg, 2001</p><p>South Africa</p><p>+27 12 345 6789</p><p>info@empoweringthenation.co.za</p></div>
-      <div class="footer-map"><h4>Find Us</h4><div class="map-frame"><iframe src="https://www.google.com/maps?q=1%20Eloff%20Street%2C%20Johannesburg&z=15&output=embed" loading="lazy"></iframe></div></div>
+  <footer class="site-footer" id="site-footer">
+    <div class="container footer-grid" id="footer-grid">
+      <div class="footer-about" id="footer-about">
+        <img src="images/logo.png" alt="Empowering the Nation Logo" class="footer-logo-img" id="footer-logo" />
+        <p id="footer-description">Empowering the Nation provides quality training programs for unemployed individuals, domestic workers, and gardeners to develop essential skills for better employment opportunities.</p>
+      </div>
+
+      <div class="footer-links" id="footer-links">
+        <h4 id="footer-links-title">Quick Links</h4>
+        <a href="index.html" id="footer-home">Home</a>
+        <a href="training-programs.html" id="footer-courses">Courses</a>
+        <a href="get-quote.html" id="footer-quote">Get Quote</a>
+        <a href="contact.html" id="footer-contact">Contact</a>
+      </div>
+
+      <div class="footer-contact" id="footer-contact-section">
+        <h4 id="footer-contact-title">Contact Us</h4>
+        <p id="footer-address-1">1 Eloff Street</p>
+        <p id="footer-address-2">Johannesburg, 2001</p>
+        <p id="footer-country">South Africa</p>
+        <p id="footer-phone">+27 12 345 6789</p>
+        <p id="footer-email">info@empoweringthenation.co.za</p>
+      </div>
+
+      <div class="footer-map" id="footer-map">
+        <h4 id="footer-map-title">Find Us</h4>
+        <div class="map-frame" id="map-frame">
+          <iframe id="map-iframe" src="https://www.google.com/maps?q=1%20Eloff%20Street%2C%20Johannesburg&z=15&output=embed" loading="lazy"></iframe>
+        </div>
+      </div>
     </div>
-    <div class="container footer-bottom"><p>© 2026 Empowering the Nation. All rights reserved.</p></div>
+
+    <div class="container footer-bottom" id="footer-bottom">
+      <p id="footer-copy">© 2026 Empowering the Nation. All rights reserved.</p>
+    </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js" id="main-script"></script>
+
+  <script>
+  const translations = {
+    en: {
+      tagline: "Empowering Communities Through Education",
+      quoteHeading: "Course Quote Calculator",
+      quoteDescription: "Select the courses you're interested in and see your personalized quote with automatic bulk discounts applied.",
+      selectHeading: "Select Your Courses",
+      selectDescription: "Choose one or more courses to get started. Discounts are automatically applied for multiple courses.",
+      summaryTitle: "Your Quote",
+      emptyText: "Select courses to see your quote"
+    },
+    zu: {
+      tagline: "Amandla Emiphakathi Ngokufunda",
+      quoteHeading: "Isibalo Samanani Ezifundo",
+      quoteDescription: "Khetha izifundo ozithandayo bese ubona inani lakho elenziwe ngokwezifiso nezaphulelo ezenzakalayo.",
+      selectHeading: "Khetha Izifundo Zakho",
+      selectDescription: "Khetha okungenani eyodwa ukuze uqale. Izaphulelo zisebenza ngokuzenzakalela.",
+      summaryTitle: "Inani Lakho",
+      emptyText: "Khetha izifundo ukuze ubone inani"
+    },
+    xh: {
+      tagline: "Ukomeleza Uluntu Ngemfundo",
+      quoteHeading: "Umatshini Wexabiso Lezifundo",
+      quoteDescription: "Khetha izifundo ozithandayo uze ubone ixabiso lakho elenziwe ngokwezifiso kunye nezaphulelo.",
+      selectHeading: "Khetha Izifundo Zakho",
+      selectDescription: "Khetha ubuncinane enye ukuze uqale. Izaphulelo zisebenza ngokuzenzekelayo.",
+      summaryTitle: "Ixabiso Lakho",
+      emptyText: "Khetha izifundo ukuze ubone ixabiso"
+    },
+    af: {
+      tagline: "Bemagtiging van Gemeenskappe deur Onderwys",
+      quoteHeading: "Kursus Kwotasieberekenaar",
+      quoteDescription: "Kies die kursusse waarin jy belangstel en sien jou persoonlike kwotasie met afslag.",
+      selectHeading: "Kies Jou Kursusse",
+      selectDescription: "Kies een of meer kursusse om te begin. Afslag word outomaties toegepas.",
+      summaryTitle: "Jou Kwotasie",
+      emptyText: "Kies kursusse om jou kwotasie te sien"
+    },
+    st: {
+      tagline: "Matlafatsa Sechaba Ka Thuto",
+      quoteHeading: "Mochini oa Theko ea Koetliso",
+      quoteDescription: "Khetha lithuto tseo u li thahasellang 'me u bone theko ea hau e ikhethileng ka litheolelo.",
+      selectHeading: "Khetha Lithuto Tsa Hao",
+      selectDescription: "Khetha bonyane e le 'ngoe ho qala. Litheolelo li sebetsa ka bohona.",
+      summaryTitle: "Theko ea Hao",
+      emptyText: "Khetha lithuto ho bona theko"
+    }
+  };
+
+  document.getElementById("language").addEventListener("change", function() {
+    const lang = this.value;
+    const t = translations[lang];
+
+    document.getElementById("tagline").textContent = t.tagline;
+    document.getElementById("quote-heading").textContent = t.quoteHeading;
+    document.getElementById("quote-description").textContent = t.quoteDescription;
+    document.getElementById("select-heading").textContent = t.selectHeading;
+    document.getElementById("select-description").textContent = t.selectDescription;
+    document.getElementById("summary-title").textContent = t.summaryTitle;
+    document.getElementById("empty-text").textContent = t.emptyText;
+  });
+</script>
+
 </body>
 </html>

@@ -5,391 +5,346 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Empowering the Nation | Contact</title>
   <link rel="stylesheet" href="style.css" />
-
-  <style>
-    .form-group {
-      position: relative;
-    }
-
-    .contact-form-card input.input-error,
-    .contact-form-card select.input-error,
-    .contact-form-card textarea.input-error {
-      border: 2px solid #f68b1f !important;
-      background: #fff7f0 !important;
-      outline: none;
-    }
-
-    .error-message {
-      display: none;
-      color: #f68b1f;
-      font-size: 12px;
-      margin-top: 5px;
-      font-weight: 600;
-    }
-
-    .error-message.active {
-      display: block;
-    }
-
-    .validation-tooltip {
-      display: none;
-      position: absolute;
-      right: 14px;
-      top: 34px;
-      background: #333;
-      color: #fff;
-      padding: 8px 12px;
-      border-radius: 6px;
-      font-size: 12px;
-      z-index: 20;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      white-space: nowrap;
-    }
-
-    .validation-tooltip.active {
-      display: block;
-    }
-
-    .validation-tooltip::before {
-      content: "";
-      position: absolute;
-      top: -6px;
-      right: 18px;
-      border-left: 6px solid transparent;
-      border-right: 6px solid transparent;
-      border-bottom: 6px solid #333;
-    }
-
-    .validation-tooltip span {
-      color: #f68b1f;
-      font-weight: bold;
-      margin-right: 6px;
-    }
-
-    .form-status {
-      display: none;
-      padding: 12px;
-      border-radius: 8px;
-      margin-bottom: 15px;
-      font-weight: 600;
-    }
-
-    .form-status.error {
-      display: block;
-      background: #fff7f0;
-      color: #f68b1f;
-      border: 1px solid #f68b1f;
-    }
-
-    .form-status.success {
-      display: block;
-      background: #ecfdf3;
-      color: #027a48;
-      border: 1px solid #12b76a;
-    }
-  </style>
 </head>
 
 <body>
-  <div class="top-bar">
-    <div class="container top-bar-inner">
-      <div class="top-left">
-        <span>📞 +27 12 345 6789</span>
-        <span>✉ info@empoweringthenation.co.za</span>
-      </div>
-      <div class="top-right">
-        <span>Empowering Communities Through Education</span>
-      </div>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div class="container top-bar-inner">
+
+    <div class="top-left">
+      <span id="phone-text">📞 +27 12 345 6789</span>
+      <span id="email-text">✉ info@empoweringthenation.co.za</span>
     </div>
+
+    <div class="top-right">
+      <span id="top-message">Empowering Communities Through Education</span>
+    </div>
+
   </div>
+</div>
 
-  <header class="main-header">
-    <div class="container nav-wrap">
-      <div class="logo-area">
-        <img src="images/logo.png" alt="Empowering the Nation Logo" class="logo-img" />
-      </div>
+<!-- HEADER -->
+<header class="main-header">
+  <div class="container nav-wrap">
 
-      <nav class="main-nav">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="training-programs.html" class="nav-link">Courses</a>
-        <a href="get-quote.html" class="nav-link">Get Quote</a>
-        <a href="contact.html" class="nav-link active">Contact</a>
-      </nav>
+    <div class="logo-area">
+      <img src="images/logo.png" alt="Empowering the Nation Logo" class="logo-img" />
     </div>
-  </header>
 
-  <main class="contact-page">
-    <section class="contact-title container">
-      <h1>Contact Us</h1>
-      <p>
-        Have questions about our courses? Need more information? We're here to help!
-        Fill out the form below or use our contact details to get in touch.
-      </p>
-    </section>
+    <nav class="main-nav">
+      <a href="index.html" class="nav-link" id="nav-home">Home</a>
+      <a href="training-programs.html" class="nav-link" id="nav-courses">Courses</a>
+      <a href="get-quote.html" class="nav-link" id="nav-quote">Get Quote</a>
+      <a href="contact.html" class="nav-link active" id="nav-contact">Contact</a>
+    </nav>
 
-    <section class="container contact-layout">
-      <div class="contact-form-card">
-        <h2>Request Information</h2>
-        <p>Fill out the form and we'll get back to you within 24 hours</p>
+    <select id="language">
+      <option value="en">English</option>
+      <option value="zu">Zulu</option>
+      <option value="xh">Xhosa</option>
+      <option value="af">Afrikaans</option>
+      <option value="st">Sesotho</option>
+    </select>
 
-        <form id="contact-form" novalidate>
-          <div class="form-group">
-            <label for="fullName">Full Name *</label>
-            <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" />
-            <div class="validation-tooltip"><span>!</span> Please fill in this field.</div>
-            <small class="error-message" id="fullNameError"></small>
+  </div>
+</header>
+
+<!-- PAGE TITLE -->
+<main class="contact-page">
+
+  <section class="contact-title container">
+    <h1 id="contact-title">Contact Us</h1>
+    <p id="contact-subtitle">
+      Have questions about our courses? Need more information? We're here to help!
+    </p>
+  </section>
+
+  <!-- CONTACT LAYOUT -->
+  <section class="container contact-layout">
+
+    <!-- FORM -->
+    <div class="contact-form-card">
+
+      <h2 id="form-title">Request Information</h2>
+      <p id="form-subtitle">Fill out the form and we'll get back to you within 24 hours</p>
+
+      <form>
+
+        <label id="label-name">Full Name *</label>
+        <input type="text" placeholder="Enter your full name" />
+
+        <div class="form-two">
+
+          <div>
+            <label id="label-email">Email Address *</label>
+            <input type="email" placeholder="your.email@example.com" />
           </div>
 
-          <div class="form-two">
-            <div class="form-group">
-              <label for="email">Email Address *</label>
-              <input type="email" id="email" name="email" placeholder="your.email@example.com" />
-              <div class="validation-tooltip"><span>!</span> Please fill in this field.</div>
-              <small class="error-message" id="emailError"></small>
-            </div>
-
-            <div class="form-group">
-              <label for="phone">Phone Number *</label>
-              <input type="tel" id="phone" name="phone" placeholder="+27 XX XXX XXXX" />
-              <div class="validation-tooltip"><span>!</span> Please fill in this field.</div>
-              <small class="error-message" id="phoneError"></small>
-            </div>
+          <div>
+            <label id="label-phone">Phone Number *</label>
+            <input type="tel" placeholder="+27 XX XXX XXXX" />
           </div>
 
-          <div class="form-group">
-            <label for="courseInterest">Course Interest</label>
-            <select id="courseInterest" name="courseInterest">
-              <option value="">Select a course</option>
-              <option value="First Aid">First Aid</option>
-              <option value="Sewing">Sewing</option>
-              <option value="Landscaping">Landscaping</option>
-              <option value="Life Skills">Life Skills</option>
-              <option value="Child Minding">Child Minding</option>
-              <option value="Cooking">Cooking</option>
-              <option value="Garden Maintenance">Garden Maintenance</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="message">Message *</label>
-            <textarea id="message" name="message" placeholder="Tell us about your training needs, questions, or any specific requirements..."></textarea>
-            <div class="validation-tooltip"><span>!</span> Please fill in this field.</div>
-            <small class="error-message" id="messageError"></small>
-          </div>
-
-          <div class="form-status" id="formStatus" aria-live="polite"></div>
-
-          <button type="submit" class="btn btn-primary form-btn">✈ Send Message</button>
-        </form>
-      </div>
-
-      <aside class="contact-side">
-        <div class="side-card">
-          <h3>Get In Touch</h3>
-          <p class="side-subtitle">Our contact information</p>
-
-          <h4>Phone</h4>
-          <p>+27 12 345 6789</p>
-
-          <h4>Email</h4>
-          <p>info@empoweringthenation.co.za</p>
-
-          <h4>Address</h4>
-          <p>1 Eloff Street<br>Johannesburg, 2001<br>South Africa</p>
         </div>
 
-        <div class="side-card">
-          <h3>Office Hours</h3>
-          <p><strong>Monday - Friday</strong> 8:00 AM - 5:00 PM</p>
-          <p><strong>Saturday</strong> 9:00 AM - 1:00 PM</p>
-          <p><strong>Sunday</strong> Closed</p>
-        </div>
+        <label id="label-course">Course Interest</label>
+        <select>
+          <option>Select a course</option>
+          <option>First Aid</option>
+          <option>Sewing</option>
+          <option>Landscaping</option>
+          <option>Life Skills</option>
+          <option>Child Minding</option>
+          <option>Cooking</option>
+          <option>Garden Maintenance</option>
+        </select>
 
-        <div class="side-card dark-card">
-          <h3>Why Choose Us?</h3>
-          <ul>
-            <li>Certified training programs</li>
-            <li>Experienced instructors</li>
-            <li>Affordable pricing</li>
-            <li>Bulk discounts available</li>
-            <li>Hands-on practical training</li>
-          </ul>
-        </div>
-      </aside>
-    </section>
+        <label id="label-message">Message *</label>
+        <textarea placeholder="Tell us about your training needs..."></textarea>
 
-    <section class="container find-us-card">
-      <h2>Find Us</h2>
-      <p>Visit our training centre in Johannesburg</p>
-      <div class="large-map">
-       <iframe src="https://www.google.com/maps?q=1%20Eloff%20Street%2C%20Johannesburg&z=15&output=embed" loading="lazy"></iframe>
-      </div>
-    </section>
-  </main>
+        <button type="button" class="btn btn-primary form-btn" id="send-btn">
+          ✈ Send Message
+        </button>
 
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div class="footer-about">
-        <img src="images/logo.png" alt="Empowering the Nation Logo" class="footer-logo-img" />
+      </form>
+    </div>
+
+    <!-- SIDE PANEL -->
+    <aside class="contact-side">
+
+      <div class="side-card">
+        <h3 id="get-in-touch">Get In Touch</h3>
+        <p class="side-subtitle" id="contact-info-title">Our contact information</p>
+
+        <h4 id="phone-title">Phone</h4>
+        <p>+27 12 345 6789</p>
+
+        <h4 id="email-title">Email</h4>
+        <p>info@empoweringthenation.co.za</p>
+
+        <h4 id="address-title">Address</h4>
         <p>
-          Empowering the Nation provides quality training programs for unemployed
-          individuals, domestic workers, and gardeners to develop essential skills for
-          better employment opportunities.
+          1 Eloff Street<br>
+          Johannesburg, 2001<br>
+          South Africa
         </p>
       </div>
 
-      <div class="footer-links">
-        <h4>Quick Links</h4>
-        <a href="index.html">Home</a>
-        <a href="training-programs.html">Courses</a>
-        <a href="get-quote.html">Get Quote</a>
-        <a href="contact.html">Contact</a>
+      <div class="side-card">
+        <h3 id="hours-title">Office Hours</h3>
+        <p><strong>Monday - Friday</strong> 8:00 AM - 5:00 PM</p>
+        <p><strong>Saturday</strong> 9:00 AM - 1:00 PM</p>
+        <p><strong>Sunday</strong> Closed</p>
       </div>
 
-      <div class="footer-contact">
-        <h4>Contact Us</h4>
-        <p>1 Eloff Street</p>
-        <p>Johannesburg, 2001</p>
-        <p>South Africa</p>
-        <p>+27 12 345 6789</p>
-        <p>info@empoweringthenation.co.za</p>
+      <div class="side-card dark-card">
+        <h3 id="why-title">Why Choose Us?</h3>
+        <ul id="why-list">
+          <li>Certified training programs</li>
+          <li>Experienced instructors</li>
+          <li>Affordable pricing</li>
+          <li>Bulk discounts available</li>
+          <li>Hands-on practical training</li>
+        </ul>
       </div>
 
-      <div class="footer-map">
-        <!--<h4>Find Us</h4>-->
-        <div class="map-frame">
-          <!--<iframe src="https://www.google.com/maps?q=1%20Eloff%20Street%2C%20Johannesburg&z=15&output=embed" loading="lazy"></iframe>-->
-        </div>
-      </div>
+    </aside>
+
+  </section>
+
+  <!-- MAP -->
+  <section class="container find-us-card">
+
+    <h2 id="find-title">Find Us</h2>
+    <p id="find-text">Visit our training centre in Johannesburg</p>
+
+    <div class="large-map">
+      <iframe
+        src="https://www.google.com/maps?q=1%20Eloff%20Street%2C%20Johannesburg&z=15&output=embed"
+        loading="lazy">
+      </iframe>
     </div>
 
-    <div class="container footer-bottom">
-      <p>© 2026 Empowering the Nation. All rights reserved.</p>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+
+  <div class="container footer-grid">
+
+    <div class="footer-about">
+      <img src="images/logo.png" class="footer-logo-img" />
+      <p id="footer-desc">
+        Empowering the Nation provides quality training programs for better employment opportunities.
+      </p>
     </div>
-  </footer>
 
-  <script>
-    const contactForm = document.getElementById("contact-form");
-    const formStatus = document.getElementById("formStatus");
+    <div class="footer-links">
+      <h4 id="footer-links-title">Quick Links</h4>
+      <a href="index.html">Home</a>
+      <a href="training-programs.html">Courses</a>
+      <a href="get-quote.html">Get Quote</a>
+      <a href="contact.html">Contact</a>
+    </div>
 
-    const fields = {
-      fullName: {
-        input: document.getElementById("fullName"),
-        error: document.getElementById("fullNameError"),
-        validate: value => value.trim().length >= 3,
-        emptyMessage: "Please fill in this field.",
-        invalidMessage: "Full name must be at least 3 characters."
-      },
-      email: {
-        input: document.getElementById("email"),
-        error: document.getElementById("emailError"),
-        validate: value => /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(value.trim()),
-        emptyMessage: "Please fill in this field.",
-        invalidMessage: "Please enter a valid email address."
-      },
-      phone: {
-        input: document.getElementById("phone"),
-        error: document.getElementById("phoneError"),
-        validate: value => /^(\\+27|0)[0-9]{9}$/.test(value.replace(/\\s/g, "")),
-        emptyMessage: "Please fill in this field.",
-        invalidMessage: "Please enter a valid South African phone number."
-      },
-      message: {
-        input: document.getElementById("message"),
-        error: document.getElementById("messageError"),
-        validate: value => value.trim().length >= 10,
-        emptyMessage: "Please fill in this field.",
-        invalidMessage: "Message must be at least 10 characters."
-      }
-    };
+    <div class="footer-contact">
+      <h4 id="footer-contact-title">Contact Us</h4>
+      <p>1 Eloff Street</p>
+      <p>Johannesburg, 2001</p>
+      <p>South Africa</p>
+      <p>+27 12 345 6789</p>
+      <p>info@empoweringthenation.co.za</p>
+    </div>
 
-    function showError(field, message) {
-      const group = field.input.closest(".form-group");
-      const tooltip = group.querySelector(".validation-tooltip");
+  </div>
 
-      field.input.classList.add("input-error");
-      field.error.textContent = message;
-      field.error.classList.add("active");
+</footer>
 
-      if (tooltip) {
-        tooltip.innerHTML = `<span>!</span> ${message}`;
-        tooltip.classList.add("active");
+<!-- TRANSLATOR SCRIPT -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
 
-        setTimeout(() => {
-          tooltip.classList.remove("active");
-        }, 2500);
+  const translations = {
+    en: {
+      phone: "📞 +27 12 345 6789",
+      email: "✉ info@empoweringthenation.co.za",
+      topMessage: "Empowering Communities Through Education",
+
+      navHome: "Home",
+      navCourses: "Courses",
+      navQuote: "Get Quote",
+      navContact: "Contact",
+
+      contactTitle: "Contact Us",
+      contactSubtitle: "Have questions about our courses? Need more information? We're here to help!",
+
+      formTitle: "Request Information",
+      formSubtitle: "Fill out the form and we'll get back to you within 24 hours",
+
+      labelName: "Full Name *",
+      labelEmail: "Email Address *",
+      labelPhone: "Phone Number *",
+      labelCourse: "Course Interest",
+      labelMessage: "Message *",
+
+      sendBtn: "✈ Send Message",
+
+      getInTouch: "Get In Touch",
+      contactInfo: "Our contact information",
+      phoneTitle: "Phone",
+      emailTitle: "Email",
+      addressTitle: "Address",
+
+      hoursTitle: "Office Hours",
+      whyTitle: "Why Choose Us?",
+
+      findTitle: "Find Us",
+      findText: "Visit our training centre in Johannesburg",
+
+      footerDesc: "Empowering the Nation provides quality training programs for better employment opportunities.",
+      footerLinks: "Quick Links",
+      footerContact: "Contact Us"
+    },
+
+    zu: {
+      phone: "📞 +27 12 345 6789",
+      email: "✉ info@empoweringthenation.co.za",
+      topMessage: "Sithuthukisa imiphakathi ngemfundo",
+
+      navHome: "Ikhaya",
+      navCourses: "Izifundo",
+      navQuote: "Thola i-Quote",
+      navContact: "Xhumana",
+
+      contactTitle: "Xhumana Nathi",
+      contactSubtitle: "Siyatholakala ukukusiza ngemibuzo yakho",
+
+      formTitle: "Cela Ulwazi",
+      formSubtitle: "Gcwalisa ifomu sizophendula emahoreni angama-24",
+
+      sendBtn: "Thumela Umlayezo",
+
+      findTitle: "Sithole Lapha",
+      findText: "Vakashela isikhungo sethu eJohannesburg"
+    },
+
+    xh: {
+      contactTitle: "Qhagamshelana Nathi",
+      contactSubtitle: "Sikhona ukukunceda ngemibuzo yakho",
+
+      sendBtn: "Thumela Umyalezo",
+      findTitle: "Sifumane Apha",
+      findText: "Tyelela iziko lethu eJohannesburg"
+    },
+
+    af: {
+      contactTitle: "Kontak Ons",
+      contactSubtitle: "Ons is hier om te help",
+
+      sendBtn: "Stuur Boodskap",
+      findTitle: "Vind Ons",
+      findText: "Besoek ons opleidingsentrum in Johannesburg"
+    },
+
+    st: {
+      contactTitle: "Ikopanye le Rona",
+      contactSubtitle: "Re mona ho u thusa",
+
+      sendBtn: "Romela Molaetsa",
+      findTitle: "Re Fumane",
+      findText: "Etela setsi sa rona Johannesburg"
+    }
+  };
+
+  const elements = {
+    phone: document.getElementById("phone-text"),
+    email: document.getElementById("email-text"),
+    topMessage: document.getElementById("top-message"),
+
+    navHome: document.getElementById("nav-home"),
+    navCourses: document.getElementById("nav-courses"),
+    navQuote: document.getElementById("nav-quote"),
+    navContact: document.getElementById("nav-contact"),
+
+    contactTitle: document.getElementById("contact-title"),
+    contactSubtitle: document.getElementById("contact-subtitle"),
+
+    formTitle: document.getElementById("form-title"),
+    formSubtitle: document.getElementById("form-subtitle"),
+
+    sendBtn: document.getElementById("send-btn"),
+
+    findTitle: document.getElementById("find-title"),
+    findText: document.getElementById("find-text"),
+
+    footerDesc: document.getElementById("footer-desc"),
+    footerLinks: document.getElementById("footer-links-title"),
+    footerContact: document.getElementById("footer-contact-title")
+  };
+
+  const languageSelect = document.getElementById("language");
+
+  function setLanguage(lang) {
+    const t = translations[lang];
+    if (!t) return;
+
+    for (let key in elements) {
+      if (elements[key] && t[key]) {
+        elements[key].textContent = t[key];
       }
     }
+  }
 
-    function clearError(field) {
-      const group = field.input.closest(".form-group");
-      const tooltip = group.querySelector(".validation-tooltip");
+  languageSelect.addEventListener("change", (e) => {
+    setLanguage(e.target.value);
+  });
 
-      field.input.classList.remove("input-error");
-      field.error.textContent = "";
-      field.error.classList.remove("active");
+});
+</script>
 
-      if (tooltip) {
-        tooltip.classList.remove("active");
-      }
-    }
-
-    function validateField(field) {
-      const value = field.input.value;
-
-      if (!value.trim()) {
-        showError(field, field.emptyMessage);
-        return false;
-      }
-
-      if (!field.validate(value)) {
-        showError(field, field.invalidMessage);
-        return false;
-      }
-
-      clearError(field);
-      return true;
-    }
-
-    Object.values(fields).forEach(field => {
-      field.input.addEventListener("blur", () => {
-        validateField(field);
-      });
-
-      field.input.addEventListener("input", () => {
-        if (field.input.classList.contains("input-error")) {
-          validateField(field);
-        }
-      });
-    });
-
-    contactForm.addEventListener("submit", function(event) {
-      event.preventDefault();
-
-      let formIsValid = true;
-
-      Object.values(fields).forEach(field => {
-        if (!validateField(field)) {
-          formIsValid = false;
-        }
-      });
-
-      if (!formIsValid) {
-        formStatus.className = "form-status error";
-        formStatus.textContent = "Please fix the highlighted fields before sending.";
-        return;
-      }
-
-      formStatus.className = "form-status success";
-      formStatus.textContent = "Thank you! Your message has been validated successfully.";
-
-      contactForm.reset();
-
-      setTimeout(() => {
-        formStatus.className = "form-status";
-        formStatus.textContent = "";
-      }, 3500);
-    });
-  </script>
 </body>
 </html>

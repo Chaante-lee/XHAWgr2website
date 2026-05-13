@@ -9,191 +9,721 @@
 <body>
 
 <!-- TOP BAR -->
-<div class="top-bar">
-  <div class="container top-bar-inner">
-    <div class="top-left">
-      <span>📞 +27 12 345 6789</span>
-      <span>✉ info@empoweringthenation.co.za</span>
+<div class="top-bar" id="top-bar">
+  <div class="container top-bar-inner" id="top-bar-inner">
+
+    <div class="top-left" id="top-left">
+      <span id="phone-text">📞 +27 12 345 6789</span>
+      <span id="email-text">✉ info@empoweringthenation.co.za</span>
     </div>
-    <div class="top-right">
-      <span>Empowering Communities Through Education</span>
+
+    <div class="top-right" id="top-right">
+      <span id="top-message">Empowering Communities Through Education</span>
     </div>
+
   </div>
 </div>
 
 <!-- HEADER -->
-<header class="main-header">
-  <div class="container nav-wrap">
-    <img src="images/logo.png" class="logo-img"/>
+<header class="main-header" id="main-header">
 
-    <nav class="main-nav">
-      <a class="nav-link active" href="index.html">Home</a>
-      <a class="nav-link" href="training-programs.html">Courses</a>
-      <a class="nav-link" href="get-quote.html">Get Quote</a>
-      <a class="nav-link" href="contact.html">Contact</a>
+  <div class="container nav-wrap" id="nav-wrap">
+
+    <img 
+      src="images/logo.png" 
+      class="logo-img"
+      id="logo-img"
+      alt="Empowering the Nation Logo"
+    />
+
+    <!-- NAVIGATION -->
+    <nav class="main-nav" id="main-nav">
+      <a class="nav-link active" id="nav-home" href="index.html">Home</a>
+      <a class="nav-link" id="nav-courses" href="training-programs.html">Courses</a>
+      <a class="nav-link" id="nav-quote" href="get-quote.html">Get Quote</a>
+      <a class="nav-link" id="nav-contact" href="contact.html">Contact</a>
     </nav>
+
+   <select id="language">
+  <option value="en">English</option>
+  <option value="zu">Zulu</option>
+  <option value="xh">Xhosa</option>
+  <option value="af">Afrikaans</option>
+  <option value="st">Sesotho</option>
+</select>
+
   </div>
+
 </header>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="container">
-    <h1>Empowering Communities Through Quality Skills Training</h1>
-    <p class="hero-text">
+<!-- HERO SECTION -->
+<section class="hero" id="hero-section">
+
+  <div class="container" id="hero-container">
+
+    <h1 id="hero-title">
+      Empowering Communities Through Quality Skills Training
+    </h1>
+
+    <p class="hero-text" id="hero-text">
       Professional development courses for unemployed individuals, domestic workers, and gardeners.
     </p>
 
-    <div class="hero-buttons">
-      <a href="training-programs.html" class="btn btn-primary">View Courses →</a>
-      <a href="get-quote.html" class="btn btn-light">Get a Quote</a>
+    <div class="hero-buttons" id="hero-buttons">
+
+      <a 
+        href="training-programs.html" 
+        class="btn btn-primary"
+        id="view-courses-btn"
+      >
+        View Courses →
+      </a>
+
+      <a 
+        href="get-quote.html" 
+        class="btn btn-light"
+        id="get-quote-btn"
+      >
+        Get a Quote
+      </a>
+
     </div>
+
   </div>
+
 </section>
 
 <!-- WHY SECTION -->
-<section class="why-section">
-  <div class="container">
-    <h2>Why Choose Us?</h2>
-    <p class="section-subtext">
+<section class="why-section" id="why-section">
+
+  <div class="container" id="why-container">
+
+    <h2 id="why-title">Why Choose Us?</h2>
+
+    <p class="section-subtext" id="why-text">
       We are committed to providing quality education and training.
     </p>
 
-    <div class="features-grid">
+    <!-- FEATURES -->
+    <div class="features-grid" id="features-grid">
 
-      <div class="feature-card">
-        <div class="feature-icon">
+      <!-- FEATURE 1 -->
+      <div class="feature-card" id="feature-card-1">
+
+        <div class="feature-icon" id="feature-icon-1">
           <svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2">
             <path d="M2 10l10-5 10 5-10 5-10-5z"></path>
             <path d="M6 12v5c0 1 2 3 6 3s6-2 6-3v-5"></path>
           </svg>
         </div>
-        <h3>Quality Training</h3>
-        <p>Professional courses designed to provide practical skills.</p>
+
+        <h3 id="quality-title">Quality Training</h3>
+
+        <p id="quality-text">
+          Professional courses designed to provide practical skills.
+        </p>
+
       </div>
 
-      <div class="feature-card">
-        <div class="feature-icon">
+      <!-- FEATURE 2 -->
+      <div class="feature-card" id="feature-card-2">
+
+        <div class="feature-icon" id="feature-icon-2">
           <svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2">
             <circle cx="9" cy="7" r="3"></circle>
             <path d="M17 11a4 4 0 0 1 4 4v2"></path>
             <path d="M3 21v-2a4 4 0 0 1 4-4h5"></path>
           </svg>
         </div>
-        <h3>Expert Instructors</h3>
-        <p>Learn from experienced professionals.</p>
+
+        <h3 id="expert-title">Expert Instructors</h3>
+
+        <p id="expert-text">
+          Learn from experienced professionals.
+        </p>
+
       </div>
 
-      <div class="feature-card">
-        <div class="feature-icon">
+      <!-- FEATURE 3 -->
+      <div class="feature-card" id="feature-card-3">
+
+        <div class="feature-icon" id="feature-icon-3">
           <svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2">
             <circle cx="12" cy="8" r="4"></circle>
             <path d="M8 12l-1 9 5-3 5 3-1-9"></path>
           </svg>
         </div>
-        <h3>Certified Programs</h3>
-        <p>Receive certification upon completion.</p>
+
+        <h3 id="certified-title">Certified Programs</h3>
+
+        <p id="certified-text">
+          Receive certification upon completion.
+        </p>
+
       </div>
 
-      <div class="feature-card">
-        <div class="feature-icon">
+      <!-- FEATURE 4 -->
+      <div class="feature-card" id="feature-card-4">
+
+        <div class="feature-icon" id="feature-icon-4">
           <svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2">
             <path d="M4 16l6-6 4 4 6-6"></path>
             <path d="M14 8h6v6"></path>
           </svg>
         </div>
-        <h3>Career Growth</h3>
-        <p>Build skills for better employment opportunities.</p>
+
+        <h3 id="career-title">Career Growth</h3>
+
+        <p id="career-text">
+          Build skills for better employment opportunities.
+        </p>
+
       </div>
 
     </div>
+
   </div>
+
 </section>
 
-<!-- TRAINING -->
-<section class="programs-preview">
-  <div class="container preview-wrap">
+<!-- TRAINING PROGRAMS -->
+<section class="programs-preview" id="programs-preview">
 
-    <div class="preview-left">
-      <h2>Our Training Programs</h2>
-      <p>We offer practical training programs for employment.</p>
+  <div class="container preview-wrap" id="preview-wrap">
 
-      <ul class="benefits-list">
-        <li>Flexible courses</li>
-        <li>Affordable pricing</li>
-        <li>Hands-on training</li>
-        <li>Certification</li>
+    <!-- LEFT -->
+    <div class="preview-left" id="preview-left">
+
+      <h2 id="programs-title">Our Training Programs</h2>
+
+      <p id="programs-text">
+        We offer practical training programs for employment.
+      </p>
+
+      <ul class="benefits-list" id="benefits-list">
+        <li id="benefit-1">Flexible courses</li>
+        <li id="benefit-2">Affordable pricing</li>
+        <li id="benefit-3">Hands-on training</li>
+        <li id="benefit-4">Certification</li>
       </ul>
 
-      <a href="#" class="btn preview-btn">Explore All Courses →</a>
+      <a href="#" class="btn preview-btn" id="explore-courses-btn">
+        Explore All Courses →
+      </a>
+
     </div>
 
-    <div class="preview-right">
-      <div class="price-card blue-card">
-        <h3>6-Month Courses</h3>
-        <p>R1,500</p>
+    <!-- RIGHT -->
+    <div class="preview-right" id="preview-right">
+
+      <div class="price-card blue-card" id="six-month-card">
+        <h3 id="six-month-title">6-Month Courses</h3>
+        <p id="six-month-price">R1,500</p>
       </div>
 
-      <div class="price-card orange-card">
-        <h3>6-Week Courses</h3>
-        <p>R750</p>
+      <div class="price-card orange-card" id="six-week-card">
+        <h3 id="six-week-title">6-Week Courses</h3>
+        <p id="six-week-price">R750</p>
       </div>
+
     </div>
 
   </div>
+
 </section>
 
-<!-- BULK -->
-<section class="bulk-home-section">
-  <div class="container">
-    <h2>Special Bulk Discounts Available!</h2>
+<!-- BULK DISCOUNTS -->
+<section class="bulk-home-section" id="bulk-home-section">
 
-    <div class="bulk-home-grid">
-      <div class="bulk-home-card"><strong>0%</strong><span>1 Course</span></div>
-      <div class="bulk-home-card"><strong>5%</strong><span>2 Courses</span></div>
-      <div class="bulk-home-card"><strong>10%</strong><span>3 Courses</span></div>
-      <div class="bulk-home-card"><strong>15%</strong><span>4+ Courses</span></div>
+  <div class="container" id="bulk-container">
+
+    <h2 id="bulk-title">Special Bulk Discounts Available!</h2>
+
+    <div class="bulk-home-grid" id="bulk-grid">
+
+      <div class="bulk-home-card" id="bulk-card-1">
+        <strong id="discount-1">0%</strong>
+        <span id="discount-text-1">1 Course</span>
+      </div>
+
+      <div class="bulk-home-card" id="bulk-card-2">
+        <strong id="discount-2">5%</strong>
+        <span id="discount-text-2">2 Courses</span>
+      </div>
+
+      <div class="bulk-home-card" id="bulk-card-3">
+        <strong id="discount-3">10%</strong>
+        <span id="discount-text-3">3 Courses</span>
+      </div>
+
+      <div class="bulk-home-card" id="bulk-card-4">
+        <strong id="discount-4">15%</strong>
+        <span id="discount-text-4">4+ Courses</span>
+      </div>
+
     </div>
 
-    <a href="#" class="btn bulk-home-btn">Calculate Your Quote</a>
+    <a href="#" class="btn bulk-home-btn" id="calculate-quote-btn">
+      Calculate Your Quote
+    </a>
+
   </div>
+
 </section>
 
-<!-- READY -->
-<section class="ready-white-section">
-  <div class="container">
-    <h2>Ready to Get Started?</h2>
-    <a href="#" class="btn btn-primary">Contact Us →</a>
+<!-- READY SECTION -->
+<section class="ready-white-section" id="ready-section">
+
+  <div class="container" id="ready-container">
+
+    <h2 id="ready-title">Ready to Get Started?</h2>
+
+    <a href="#" class="btn btn-primary" id="contact-btn">
+      Contact Us →
+    </a>
+
   </div>
+
 </section>
 
 <!-- FOOTER -->
-<footer class="site-footer">
-  <div class="container footer-grid">
+<footer class="site-footer" id="site-footer">
 
-    <div>
-      <img src="images/logo.png" class="footer-logo-img"/>
-      <p>Empowering skills for better employment.</p>
+  <div class="container footer-grid" id="footer-grid">
+
+    <!-- FOOTER LOGO -->
+    <div id="footer-about">
+
+      <img 
+        src="images/logo.png" 
+        class="footer-logo-img"
+        id="footer-logo"
+        alt="Footer Logo"
+      />
+
+      <p id="footer-description">
+        Empowering skills for better employment.
+      </p>
+
     </div>
 
-    <div class="footer-links">
-      <h4>Quick Links</h4>
-      <a href="#">Home</a>
-      <a href="#">Courses</a>
-      <a href="#">Contact</a>
+    <!-- FOOTER LINKS -->
+    <div class="footer-links" id="footer-links">
+
+      <h4 id="footer-links-title">Quick Links</h4>
+
+      <a href="#" id="footer-home-link">Home</a>
+      <a href="#" id="footer-courses-link">Courses</a>
+      <a href="#" id="footer-contact-link">Contact</a>
+
     </div>
 
-    <div class="footer-contact">
-      <h4>Contact</h4>
-      <p>1 Eloff Street</p>
-      <p>Johannesburg</p>
+    <!-- FOOTER CONTACT -->
+    <div class="footer-contact" id="footer-contact">
+
+      <h4 id="footer-contact-title">Contact</h4>
+
+      <p id="footer-address-1">1 Eloff Street</p>
+      <p id="footer-address-2">Johannesburg</p>
+
     </div>
 
-    <div class="footer-map">
-      <iframe src="https://www.google.com/maps?q=Johannesburg&output=embed"></iframe>
+    <!-- MAP -->
+    <div class="footer-map" id="footer-map">
+
+      <iframe 
+        id="map-frame"
+        src="https://www.google.com/maps?q=Johannesburg&output=embed">
+      </iframe>
+
     </div>
 
   </div>
+
 </footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+ const translations = {
+  en: {
+    phone: "📞 +27 12 345 6789",
+    email: "✉ info@empoweringthenation.co.za",
+    topMessage: "Empowering Communities Through Education",
+
+    navHome: "Home",
+    navCourses: "Courses",
+    navQuote: "Get Quote",
+    navContact: "Contact",
+
+    heroTitle: "Empowering Communities Through Quality Skills Training",
+    heroText: "Professional development courses for unemployed individuals, domestic workers, and gardeners.",
+    viewCourses: "View Courses →",
+    getQuote: "Get a Quote",
+
+    whyTitle: "Why Choose Us?",
+    whyText: "We are committed to providing quality education and training.",
+
+    qualityTitle: "Quality Training",
+    qualityText: "Professional courses designed to provide practical skills.",
+
+    expertTitle: "Expert Instructors",
+    expertText: "Learn from experienced professionals.",
+
+    certifiedTitle: "Certified Programs",
+    certifiedText: "Receive certification upon completion.",
+
+    careerTitle: "Career Growth",
+    careerText: "Build skills for better employment opportunities.",
+
+    programsTitle: "Our Training Programs",
+    programsText: "We offer practical training programs for employment.",
+
+    benefit1: "Flexible courses",
+    benefit2: "Affordable pricing",
+    benefit3: "Hands-on training",
+    benefit4: "Certification",
+
+    exploreCourses: "Explore All Courses →",
+
+    sixMonth: "6-Month Courses",
+    sixWeek: "6-Week Courses",
+
+    bulkTitle: "Special Bulk Discounts Available!",
+    discount1: "1 Course",
+    discount2: "2 Courses",
+    discount3: "3 Courses",
+    discount4: "4+ Courses",
+
+    calculateQuote: "Calculate Your Quote",
+
+    readyTitle: "Ready to Get Started?",
+    contactBtn: "Contact Us →",
+
+    footerDesc: "Empowering skills for better employment.",
+    quickLinks: "Quick Links",
+    footerContact: "Contact"
+  },
+
+  zu: {
+    phone: "📞 +27 12 345 6789",
+    email: "✉ info@empoweringthenation.co.za",
+    topMessage: "Sithuthukisa imiphakathi ngemfundo",
+
+    navHome: "Ikhaya",
+    navCourses: "Izifundo",
+    navQuote: "Thola i-Quote",
+    navContact: "Xhumana",
+
+    heroTitle: "Sithuthukisa imiphakathi ngamakhono asezingeni eliphezulu",
+    heroText: "Izifundo zokuthuthukisa amakhono abantu abangasebenzi, abasebenzi basekhaya nabalimi.",
+    viewCourses: "Buka Izifundo →",
+    getQuote: "Thola i-Quote",
+
+    whyTitle: "Kungani ukhethe thina?",
+    whyText: "Sizinikele ekunikezeni imfundo esezingeni eliphezulu.",
+
+    qualityTitle: "Ukuqeqeshwa Okuseqophelweni",
+    qualityText: "Izifundo ezikwenza uthole amakhono asebenzayo.",
+
+    expertTitle: "Abafundisi Abanolwazi",
+    expertText: "Funda kochwepheshe.",
+
+    certifiedTitle: "Izitifiketi Ezisemthethweni",
+    certifiedText: "Uthola isitifiketi uma uqeda.",
+
+    careerTitle: "Ukuthuthuka Komsebenzi",
+    careerText: "Yakha amakhono akho emisebenzi engcono.",
+
+    programsTitle: "Izinhlelo Zethu Zokuqeqesha",
+    programsText: "Sinikeza ukuqeqeshwa okusebenzayo.",
+
+    benefit1: "Izifundo eziguquguqukayo",
+    benefit2: "Izindleko eziphansi",
+    benefit3: "Ukuqeqeshwa okusebenzayo",
+    benefit4: "Isitifiketi",
+
+    exploreCourses: "Buka Zonke Izifundo →",
+
+    sixMonth: "Izifundo Zonyaka",
+    sixWeek: "Izifundo Zamasonto Ayisi-6",
+
+    bulkTitle: "Izaphulelo Ezikhethekile!",
+    discount1: "Isifundo 1",
+    discount2: "Izifundo 2",
+    discount3: "Izifundo 3",
+    discount4: "4+ Izifundo",
+
+    calculateQuote: "Bala i-Quote Yakho",
+
+    readyTitle: "Usukulungele Ukuqala?",
+    contactBtn: "Xhumana Nathi →",
+
+    footerDesc: "Sithuthukisa amakhono omsebenzi ongcono.",
+    quickLinks: "Izixhumanisi",
+    footerContact: "Xhumana"
+  },
+
+  // XHOSA
+  xh: {
+    phone: "📞 +27 12 345 6789",
+    email: "✉ info@empoweringthenation.co.za",
+    topMessage: "Siphuhlisa uluntu ngemfundo",
+
+    navHome: "Ekhaya",
+    navCourses: "Izifundo",
+    navQuote: "Fumana i-Quote",
+    navContact: "Qhagamshelana",
+
+    heroTitle: "Siphuhlisa uluntu ngezakhono ezisemgangathweni",
+    heroText: "Izifundo zophuhliso kubantu abangaphangeliyo, abasebenzi basekhaya nabalimi.",
+    viewCourses: "Jonga Izifundo →",
+    getQuote: "Fumana i-Quote",
+
+    whyTitle: "Kutheni ukhetha thina?",
+    whyText: "Sizibophelele kwimfundo esemgangathweni.",
+
+    qualityTitle: "Uqeqesho olusemgangathweni",
+    qualityText: "Izifundo ezikunika izakhono ezisebenzayo.",
+
+    expertTitle: "Abafundisi abanamava",
+    expertText: "Funda kwiingcali.",
+
+    certifiedTitle: "Iinkqubo eziqinisekisiweyo",
+    certifiedText: "Fumana isatifikethi xa ugqibile.",
+
+    careerTitle: "Uphuhliso lomsebenzi",
+    careerText: "Yakha izakhono zomsebenzi ongcono.",
+
+    programsTitle: "Iinkqubo zethu zoqeqesho",
+    programsText: "Sinikezela ngoqeqesho olusebenzayo.",
+
+    benefit1: "Izifundo eziguquguqukayo",
+    benefit2: "Amaxabiso afikelelekayo",
+    benefit3: "Uqeqesho olusebenzayo",
+    benefit4: "Isatifikethi",
+
+    exploreCourses: "Jonga zonke izifundo →",
+
+    sixMonth: "Iinyanga ezi-6",
+    sixWeek: "Iiveki ezi-6",
+
+    bulkTitle: "Izaphulelo ezikhethekileyo!",
+    discount1: "Isifundo 1",
+    discount2: "Izifundo 2",
+    discount3: "Izifundo 3",
+    discount4: "4+ Izifundo",
+
+    calculateQuote: "Bala i-Quote yakho",
+
+    readyTitle: "Ulungele ukuqala?",
+    contactBtn: "Qhagamshelana nathi →",
+
+    footerDesc: "Siphuhlisa izakhono zomsebenzi ongcono.",
+    quickLinks: "Iikhonkco",
+    footerContact: "Qhagamshelana"
+  },
+
+  // AFRIKAANS
+  af: {
+    phone: "📞 +27 12 345 6789",
+    email: "✉ info@empoweringthenation.co.za",
+    topMessage: "Bemagtig gemeenskappe deur onderwys",
+
+    navHome: "Tuis",
+    navCourses: "Kursusse",
+    navQuote: "Kry Kwotasie",
+    navContact: "Kontak",
+
+    heroTitle: "Bemagtig gemeenskappe met kwaliteit vaardigheidsopleiding",
+    heroText: "Professionele kursusse vir werklose individue, huishulpe en tuiniers.",
+    viewCourses: "Sien Kursusse →",
+    getQuote: "Kry Kwotasie",
+
+    whyTitle: "Hoekom ons kies?",
+    whyText: "Ons bied kwaliteit onderwys en opleiding.",
+
+    qualityTitle: "Kwaliteit opleiding",
+    qualityText: "Praktiese vaardighede-gedrewe kursusse.",
+
+    expertTitle: "Deskundige instrukteurs",
+    expertText: "Leer van ervare professionele mense.",
+
+    certifiedTitle: "Gesertifiseerde programme",
+    certifiedText: "Ontvang sertifisering na voltooiing.",
+
+    careerTitle: "Loopbaangroei",
+    careerText: "Bou vaardighede vir beter werk.",
+
+    programsTitle: "Ons opleidingsprogramme",
+    programsText: "Praktiese opleiding vir werk.",
+
+    benefit1: "Buigsame kursusse",
+    benefit2: "Bekostigbaar",
+    benefit3: "Praktiese opleiding",
+    benefit4: "Sertifisering",
+
+    exploreCourses: "Verken kursusse →",
+
+    sixMonth: "6 Maande kursusse",
+    sixWeek: "6 weke kursusse",
+
+    bulkTitle: "Spesiale afslag beskikbaar!",
+    discount1: "1 Kursus",
+    discount2: "2 Kursusse",
+    discount3: "3 Kursusse",
+    discount4: "4+ Kursusse",
+
+    calculateQuote: "Bereken jou kwotasie",
+
+    readyTitle: "Gereed om te begin?",
+    contactBtn: "Kontak Ons →",
+
+    footerDesc: "Bemagtig vaardighede vir beter werk.",
+    quickLinks: "Vinnige skakels",
+    footerContact: "Kontak"
+  },
+
+  // SESOTHO
+  st: {
+    phone: "📞 +27 12 345 6789",
+    email: "✉ info@empoweringthenation.co.za",
+    topMessage: "Re matlafatsa sechaba ka thuto",
+
+    navHome: "Lehae",
+    navCourses: "Lithuto",
+    navQuote: "Fumana Quote",
+    navContact: "Ikopanye",
+
+    heroTitle: "Re matlafatsa sechaba ka koetliso ea litsebo",
+    heroText: "Lithuto tsa batho ba hlokang mosebetsi, basebetsi ba malapeng le balemi.",
+    viewCourses: "Sheba Lithuto →",
+    getQuote: "Fumana Quote",
+
+    whyTitle: "Hobaneng re khethoe?",
+    whyText: "Re ikemiselitse ho fana ka thuto ea boleng.",
+
+    qualityTitle: "Koetliso ea boleng",
+    qualityText: "Lithuto tsa litsebo tse sebetsang.",
+
+    expertTitle: "Bakoetlisi ba nang le boiphihlelo",
+    expertText: "Ithute ho litsebi.",
+
+    certifiedTitle: "Mananeo a netefalitsoeng",
+    certifiedText: "Fumana setifikeiti ha u qeta.",
+
+    careerTitle: "Khatelo-pele ea mosebetsi",
+    careerText: "Haha litsebo tsa mosebetsi o betere.",
+
+    programsTitle: "Mananeo a rona a koetliso",
+    programsText: "Koetliso e sebetsang bakeng sa mosebetsi.",
+
+    benefit1: "Lithuto tse feto-fetohang",
+    benefit2: "Theko e tlase",
+    benefit3: "Koetliso e sebetsang",
+    benefit4: "Setifikeiti",
+
+    exploreCourses: "Sheba lithuto tsohle →",
+
+    sixMonth: "Likhoeli tse 6",
+    sixWeek: "Libeke tse 6",
+
+    bulkTitle: "Theolelo e khethehileng!",
+    discount1: "Thuto e le 1",
+    discount2: "Lithuto tse 2",
+    discount3: "Lithuto tse 3",
+    discount4: "4+ Lithuto",
+
+    calculateQuote: "Bala Quote ea hau",
+
+    readyTitle: "U loketse ho qala?",
+    contactBtn: "Ikopanye →",
+
+    footerDesc: "Re matlafatsa litsebo tsa mosebetsi o betere.",
+    quickLinks: "Lihokelo",
+    footerContact: "Ikopanye"
+  }
+};
+
+  const elements = {
+    phone: document.getElementById("phone-text"),
+    email: document.getElementById("email-text"),
+    topMessage: document.getElementById("top-message"),
+
+    navHome: document.getElementById("nav-home"),
+    navCourses: document.getElementById("nav-courses"),
+    navQuote: document.getElementById("nav-quote"),
+    navContact: document.getElementById("nav-contact"),
+
+    heroTitle: document.getElementById("hero-title"),
+    heroText: document.getElementById("hero-text"),
+    viewCourses: document.getElementById("view-courses-btn"),
+    getQuote: document.getElementById("get-quote-btn"),
+
+    whyTitle: document.getElementById("why-title"),
+    whyText: document.getElementById("why-text"),
+
+    qualityTitle: document.getElementById("quality-title"),
+    qualityText: document.getElementById("quality-text"),
+
+    expertTitle: document.getElementById("expert-title"),
+    expertText: document.getElementById("expert-text"),
+
+    certifiedTitle: document.getElementById("certified-title"),
+    certifiedText: document.getElementById("certified-text"),
+
+    careerTitle: document.getElementById("career-title"),
+    careerText: document.getElementById("career-text"),
+
+    programsTitle: document.getElementById("programs-title"),
+    programsText: document.getElementById("programs-text"),
+
+    benefit1: document.getElementById("benefit-1"),
+    benefit2: document.getElementById("benefit-2"),
+    benefit3: document.getElementById("benefit-3"),
+    benefit4: document.getElementById("benefit-4"),
+
+    exploreCourses: document.getElementById("explore-courses-btn"),
+
+    sixMonth: document.getElementById("six-month-title"),
+    sixWeek: document.getElementById("six-week-title"),
+
+    bulkTitle: document.getElementById("bulk-title"),
+
+    discount1: document.getElementById("discount-text-1"),
+    discount2: document.getElementById("discount-text-2"),
+    discount3: document.getElementById("discount-text-3"),
+    discount4: document.getElementById("discount-text-4"),
+
+    calculateQuote: document.getElementById("calculate-quote-btn"),
+
+    readyTitle: document.getElementById("ready-title"),
+    contactBtn: document.getElementById("contact-btn"),
+
+    footerDesc: document.getElementById("footer-description"),
+    quickLinks: document.getElementById("footer-links-title"),
+    footerContact: document.getElementById("footer-contact-title")
+  };
+
+  const languageSelect = document.getElementById("language");
+
+  function setLanguage(lang) {
+    const t = translations[lang];
+    if (!t) return;
+
+    Object.keys(elements).forEach(key => {
+      if (elements[key] && t[key]) {
+        elements[key].textContent = t[key];
+      }
+    });
+  }
+
+  languageSelect.addEventListener("change", (e) => {
+  setLanguage(e.target.value);
+});
+
+});
+</script>
 
 </body>
 </html>
