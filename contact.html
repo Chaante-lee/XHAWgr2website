@@ -70,46 +70,51 @@
       <h2 id="form-title">Request Information</h2>
       <p id="form-subtitle">Fill out the form and we'll get back to you within 24 hours</p>
 
-      <form>
-
-        <label id="label-name">Full Name *</label>
-        <input type="text" placeholder="Enter your full name" />
-
-        <div class="form-two">
-
-          <div>
-            <label id="label-email">Email Address *</label>
-            <input type="email" placeholder="your.email@example.com" />
+        <form id="contact-form" novalidate>
+          <div class="form-group">
+            <label for="fullName">Full Name *</label>
+            <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" />
+            <div class="validation-tooltip"><span>!</span> Please fill in this field.</div>
+            <small class="error-message" id="fullNameError"></small>
           </div>
 
-          <div>
-            <label id="label-phone">Phone Number *</label>
-            <input type="tel" placeholder="+27 XX XXX XXXX" />
+          <div class="form-two">
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" placeholder="your.email@example.com" />
+              <div class="validation-tooltip"><span>!</span> Please fill in this field.</div>
+              <small class="error-message" id="emailError"></small>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number *</label>
+              <input type="tel" id="phone" name="phone" placeholder="+27 XX XXX XXXX" />
+              <div class="validation-tooltip"><span>!</span> Please fill in this field.</div>
+              <small class="error-message" id="phoneError"></small>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="courseInterest">Course Interest</label>
+            <select id="courseInterest" name="courseInterest">
+              <option value="">Select a course</option>
+              <option value="First Aid">First Aid</option>
+              <option value="Sewing">Sewing</option>
+              <option value="Landscaping">Landscaping</option>
+              <option value="Life Skills">Life Skills</option>
+              <option value="Child Minding">Child Minding</option>
+              <option value="Cooking">Cooking</option>
+              <option value="Garden Maintenance">Garden Maintenance</option>
+            </select>
           </div>
 
         </div>
 
-        <label id="label-course">Course Interest</label>
-        <select>
-          <option>Select a course</option>
-          <option>First Aid</option>
-          <option>Sewing</option>
-          <option>Landscaping</option>
-          <option>Life Skills</option>
-          <option>Child Minding</option>
-          <option>Cooking</option>
-          <option>Garden Maintenance</option>
-        </select>
+          <div class="form-status" id="formStatus" aria-live="polite"></div>
 
-        <label id="label-message">Message *</label>
-        <textarea placeholder="Tell us about your training needs..."></textarea>
-
-        <button type="button" class="btn btn-primary form-btn" id="send-btn">
-          ✈ Send Message
-        </button>
-
-      </form>
-    </div>
+          <button type="submit" class="btn btn-primary form-btn">✈ Send Message</button>
+        </form>
+      </div>
 
     <!-- SIDE PANEL -->
     <aside class="contact-side">
@@ -204,147 +209,128 @@
 
 </footer>
 
-<!-- TRANSLATOR SCRIPT -->
-<script>
-document.addEventListener("DOMContentLoaded", () => {
+  <script>
+    const contactForm = document.getElementById("contact-form");
+    const formStatus = document.getElementById("formStatus");
 
-  const translations = {
-    en: {
-      phone: "📞 +27 12 345 6789",
-      email: "✉ info@empoweringthenation.co.za",
-      topMessage: "Empowering Communities Through Education",
+    const fields = {
+      fullName: {
+        input: document.getElementById("fullName"),
+        error: document.getElementById("fullNameError"),
+        validate: value => value.trim().length >= 3,
+        emptyMessage: "Please fill in this field.",
+        invalidMessage: "Full name must be at least 3 characters."
+      },
+      email: {
+        input: document.getElementById("email"),
+        error: document.getElementById("emailError"),
+        validate: value => /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(value.trim()),
+        emptyMessage: "Please fill in this field.",
+        invalidMessage: "Please enter a valid email address."
+      },
+      phone: {
+        input: document.getElementById("phone"),
+        error: document.getElementById("phoneError"),
+        validate: value => /^(\\+27|0)[0-9]{9}$/.test(value.replace(/\\s/g, "")),
+        emptyMessage: "Please fill in this field.",
+        invalidMessage: "Please enter a valid South African phone number."
+      },
+      message: {
+        input: document.getElementById("message"),
+        error: document.getElementById("messageError"),
+        validate: value => value.trim().length >= 10,
+        emptyMessage: "Please fill in this field.",
+        invalidMessage: "Message must be at least 10 characters."
+      }
+    };
 
-      navHome: "Home",
-      navCourses: "Courses",
-      navQuote: "Get Quote",
-      navContact: "Contact",
+    function showError(field, message) {
+      const group = field.input.closest(".form-group");
+      const tooltip = group.querySelector(".validation-tooltip");
 
-      contactTitle: "Contact Us",
-      contactSubtitle: "Have questions about our courses? Need more information? We're here to help!",
+      field.input.classList.add("input-error");
+      field.error.textContent = message;
+      field.error.classList.add("active");
 
-      formTitle: "Request Information",
-      formSubtitle: "Fill out the form and we'll get back to you within 24 hours",
+      if (tooltip) {
+        tooltip.innerHTML = `<span>!</span> ${message}`;
+        tooltip.classList.add("active");
 
-      labelName: "Full Name *",
-      labelEmail: "Email Address *",
-      labelPhone: "Phone Number *",
-      labelCourse: "Course Interest",
-      labelMessage: "Message *",
-
-      sendBtn: "✈ Send Message",
-
-      getInTouch: "Get In Touch",
-      contactInfo: "Our contact information",
-      phoneTitle: "Phone",
-      emailTitle: "Email",
-      addressTitle: "Address",
-
-      hoursTitle: "Office Hours",
-      whyTitle: "Why Choose Us?",
-
-      findTitle: "Find Us",
-      findText: "Visit our training centre in Johannesburg",
-
-      footerDesc: "Empowering the Nation provides quality training programs for better employment opportunities.",
-      footerLinks: "Quick Links",
-      footerContact: "Contact Us"
-    },
-
-    zu: {
-      phone: "📞 +27 12 345 6789",
-      email: "✉ info@empoweringthenation.co.za",
-      topMessage: "Sithuthukisa imiphakathi ngemfundo",
-
-      navHome: "Ikhaya",
-      navCourses: "Izifundo",
-      navQuote: "Thola i-Quote",
-      navContact: "Xhumana",
-
-      contactTitle: "Xhumana Nathi",
-      contactSubtitle: "Siyatholakala ukukusiza ngemibuzo yakho",
-
-      formTitle: "Cela Ulwazi",
-      formSubtitle: "Gcwalisa ifomu sizophendula emahoreni angama-24",
-
-      sendBtn: "Thumela Umlayezo",
-
-      findTitle: "Sithole Lapha",
-      findText: "Vakashela isikhungo sethu eJohannesburg"
-    },
-
-    xh: {
-      contactTitle: "Qhagamshelana Nathi",
-      contactSubtitle: "Sikhona ukukunceda ngemibuzo yakho",
-
-      sendBtn: "Thumela Umyalezo",
-      findTitle: "Sifumane Apha",
-      findText: "Tyelela iziko lethu eJohannesburg"
-    },
-
-    af: {
-      contactTitle: "Kontak Ons",
-      contactSubtitle: "Ons is hier om te help",
-
-      sendBtn: "Stuur Boodskap",
-      findTitle: "Vind Ons",
-      findText: "Besoek ons opleidingsentrum in Johannesburg"
-    },
-
-    st: {
-      contactTitle: "Ikopanye le Rona",
-      contactSubtitle: "Re mona ho u thusa",
-
-      sendBtn: "Romela Molaetsa",
-      findTitle: "Re Fumane",
-      findText: "Etela setsi sa rona Johannesburg"
-    }
-  };
-
-  const elements = {
-    phone: document.getElementById("phone-text"),
-    email: document.getElementById("email-text"),
-    topMessage: document.getElementById("top-message"),
-
-    navHome: document.getElementById("nav-home"),
-    navCourses: document.getElementById("nav-courses"),
-    navQuote: document.getElementById("nav-quote"),
-    navContact: document.getElementById("nav-contact"),
-
-    contactTitle: document.getElementById("contact-title"),
-    contactSubtitle: document.getElementById("contact-subtitle"),
-
-    formTitle: document.getElementById("form-title"),
-    formSubtitle: document.getElementById("form-subtitle"),
-
-    sendBtn: document.getElementById("send-btn"),
-
-    findTitle: document.getElementById("find-title"),
-    findText: document.getElementById("find-text"),
-
-    footerDesc: document.getElementById("footer-desc"),
-    footerLinks: document.getElementById("footer-links-title"),
-    footerContact: document.getElementById("footer-contact-title")
-  };
-
-  const languageSelect = document.getElementById("language");
-
-  function setLanguage(lang) {
-    const t = translations[lang];
-    if (!t) return;
-
-    for (let key in elements) {
-      if (elements[key] && t[key]) {
-        elements[key].textContent = t[key];
+        setTimeout(() => {
+          tooltip.classList.remove("active");
+        }, 2500);
       }
     }
-  }
 
-  languageSelect.addEventListener("change", (e) => {
-    setLanguage(e.target.value);
-  });
+    function clearError(field) {
+      const group = field.input.closest(".form-group");
+      const tooltip = group.querySelector(".validation-tooltip");
 
-});
-</script>
+      field.input.classList.remove("input-error");
+      field.error.textContent = "";
+      field.error.classList.remove("active");
 
+      if (tooltip) {
+        tooltip.classList.remove("active");
+      }
+    }
+
+    function validateField(field) {
+      const value = field.input.value;
+
+      if (!value.trim()) {
+        showError(field, field.emptyMessage);
+        return false;
+      }
+
+      if (!field.validate(value)) {
+        showError(field, field.invalidMessage);
+        return false;
+      }
+
+      clearError(field);
+      return true;
+    }
+
+    Object.values(fields).forEach(field => {
+      field.input.addEventListener("blur", () => {
+        validateField(field);
+      });
+
+      field.input.addEventListener("input", () => {
+        if (field.input.classList.contains("input-error")) {
+          validateField(field);
+        }
+      });
+    });
+
+    contactForm.addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      let formIsValid = true;
+
+      Object.values(fields).forEach(field => {
+        if (!validateField(field)) {
+          formIsValid = false;
+        }
+      });
+
+      if (!formIsValid) {
+        formStatus.className = "form-status error";
+        formStatus.textContent = "Please fix the highlighted fields before sending.";
+        return;
+      }
+
+      formStatus.className = "form-status success";
+      formStatus.textContent = "Thank you! Your message has been validated successfully.";
+
+      contactForm.reset();
+
+      setTimeout(() => {
+        formStatus.className = "form-status";
+        formStatus.textContent = "";
+      }, 3500);
+    });
+  </script>
 </body>
 </html>
