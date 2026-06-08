@@ -1275,3 +1275,549 @@ img {
   color: #dc2626;
   border: 1px solid #fecaca;
 }
+
+/* =========================
+   INDIVIDUAL COURSE DETAIL PAGES
+   ========================= */
+.course-detail-page {
+  background: #fff;
+}
+
+.course-detail-hero {
+  padding: 38px 0 50px;
+}
+
+.back-link {
+  display: inline-block;
+  color: var(--orange);
+  text-decoration: none;
+  font-weight: 700;
+  margin-bottom: 28px;
+}
+
+.course-detail-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  gap: 54px;
+  align-items: center;
+}
+
+.course-detail-intro h1 {
+  font-size: 52px;
+  line-height: 1.05;
+  color: #111827;
+  margin: 18px 0 18px;
+  font-weight: 800;
+}
+
+.course-detail-intro p {
+  font-size: 22px;
+  line-height: 1.45;
+  color: #4b5563;
+  margin-bottom: 28px;
+}
+
+.course-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 26px;
+  flex-wrap: wrap;
+  font-size: 18px;
+}
+
+.hero-price {
+  color: var(--navy);
+  font-size: 34px;
+  font-weight: 800;
+}
+
+.course-image-card {
+  min-height: 330px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #f8fafc 0%, #dbeafe 48%, #fff7ed 100%);
+  border: 1px solid var(--border);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.10);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 34px;
+}
+
+.course-image-icon {
+  font-size: 82px;
+  line-height: 1;
+  margin-bottom: 18px;
+}
+
+.course-image-card h2 {
+  color: #111827;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.course-image-card p {
+  color: #4b5563;
+  max-width: 360px;
+}
+
+.course-detail-content {
+  display: grid;
+  grid-template-columns: 1.7fr 0.8fr;
+  gap: 34px;
+  align-items: start;
+  margin-bottom: 54px;
+}
+
+.learn-panel {
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+}
+
+.learn-panel h2 {
+  color: #111827;
+  font-size: 28px;
+  margin-bottom: 22px;
+}
+
+.learn-list {
+  list-style: none;
+}
+
+.learn-list li {
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.learn-check {
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--orange);
+  border-radius: 50%;
+  color: var(--orange);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  margin-top: 2px;
+}
+
+.learn-list strong {
+  font-size: 20px;
+  color: #111827;
+}
+
+.learn-list p {
+  margin-top: 6px;
+  color: #4b5563;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.detail-sidebar {
+  display: grid;
+  gap: 24px;
+}
+
+.course-info-card {
+  background: var(--navy);
+  color: #fff;
+  border-radius: 16px;
+  padding: 28px;
+}
+
+.course-info-card h2,
+.bulk-small-card h2 {
+  font-size: 22px;
+  margin-bottom: 22px;
+}
+
+.course-info-card div {
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+.course-info-card div:last-child {
+  border-bottom: none;
+}
+
+.course-info-card span {
+  display: block;
+  color: #dbe7ff;
+  margin-bottom: 4px;
+}
+
+.course-info-card strong {
+  font-size: 18px;
+}
+
+.bulk-small-card {
+  border: 2px solid var(--orange);
+  border-radius: 16px;
+  padding: 28px;
+}
+
+.bulk-small-card p,
+.bulk-small-card li {
+  color: #374151;
+  margin-bottom: 10px;
+}
+
+.bulk-small-card ul {
+  padding-left: 18px;
+  margin: 12px 0 22px;
+}
+
+.bulk-small-card .btn {
+  width: 100%;
+}
+
+.course-cta-box {
+  background: #f8fafc;
+  border-radius: 18px;
+  padding: 44px 28px;
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.course-cta-box h2 {
+  font-size: 30px;
+  color: #111827;
+  margin-bottom: 12px;
+}
+
+.course-cta-box p {
+  color: #4b5563;
+  font-size: 18px;
+  margin-bottom: 22px;
+}
+
+.course-cta-box div {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 900px) {
+  .course-detail-hero-grid,
+  .course-detail-content {
+    grid-template-columns: 1fr;
+  }
+
+  .course-detail-intro h1 {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 600px) {
+  .course-detail-intro h1 {
+    font-size: 34px;
+  }
+
+  .course-detail-intro p {
+    font-size: 18px;
+  }
+
+  .course-actions {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Professional contact page icons and cleaned form layout */
+.icon,
+.field-icon,
+.side-icon,
+.btn-icon,
+.check-icon {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex: 0 0 auto;
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+  vertical-align: -3px;
+  margin-right: 6px;
+}
+
+.top-left span {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.input-wrap {
+  position: relative;
+}
+
+.field-icon {
+  width: 20px;
+  height: 20px;
+  color: var(--orange);
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.textarea-wrap .field-icon {
+  top: 21px;
+  transform: none;
+}
+
+.contact-form-card .input-wrap input,
+.contact-form-card .input-wrap select,
+.contact-form-card .input-wrap textarea {
+  padding-left: 48px;
+  border: 1px solid transparent;
+}
+
+.contact-form-card .input-wrap input:focus,
+.contact-form-card .input-wrap select:focus,
+.contact-form-card .input-wrap textarea:focus {
+  outline: none;
+  border-color: var(--orange);
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(246, 139, 31, 0.14);
+}
+
+.side-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.side-heading h3,
+.side-heading .side-subtitle {
+  margin: 0;
+}
+
+.side-icon {
+  width: 28px;
+  height: 28px;
+  color: var(--orange);
+  padding: 4px;
+  border-radius: 999px;
+  background: rgba(246, 139, 31, 0.12);
+}
+
+.btn-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.dark-card li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 0;
+}
+
+.dark-card li::before {
+  content: none;
+}
+
+.check-icon {
+  width: 18px;
+  height: 18px;
+  color: var(--orange);
+}
+
+/* Final professional icon polish across the site */
+.inline-icon,
+.learn-check-icon,
+.course-image-svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex: 0 0 auto;
+}
+
+.inline-icon {
+  width: 22px;
+  height: 22px;
+  color: var(--orange);
+  vertical-align: -5px;
+  margin-right: 8px;
+}
+
+.learn-check-icon {
+  width: 22px;
+  height: 22px;
+  color: var(--orange);
+  border: 2px solid var(--orange);
+  border-radius: 999px;
+  padding: 3px;
+  margin-top: 3px;
+}
+
+.course-image-svg {
+  width: 76px;
+  height: 76px;
+  color: var(--orange);
+  margin: 0 auto 16px;
+}
+
+.course-image-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0;
+}
+
+.course-meta-row span,
+.course-heading h2,
+.course-detail-card h4,
+.discount-banner h2,
+.learn-panel h2,
+.bulk-small-card h2,
+.top-left span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Contact page dropdown fix */
+.contact-form-card .input-wrap select {
+  height: 58px;
+  padding-left: 54px !important;
+  padding-right: 46px !important;
+  line-height: 58px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #f3f4f6;
+  background-image: linear-gradient(45deg, transparent 50%, var(--navy) 50%), linear-gradient(135deg, var(--navy) 50%, transparent 50%);
+  background-position: calc(100% - 22px) 26px, calc(100% - 14px) 26px;
+  background-size: 8px 8px, 8px 8px;
+  background-repeat: no-repeat;
+}
+
+.contact-form-card .input-wrap select::-ms-expand {
+  display: none;
+}
+
+.contact-form-card .input-wrap select:focus {
+  background-color: #fff;
+}
+
+.contact-form-card .input-wrap:has(select) .field-icon {
+  left: 18px;
+  z-index: 3;
+  pointer-events: none;
+}
+
+/* Make error handling visually obvious even with icon wrappers */
+.contact-form-card input.input-error,
+.contact-form-card select.input-error,
+.contact-form-card textarea.input-error {
+  border: 2px solid #dc2626 !important;
+  background-color: #fff7f7 !important;
+}
+
+/* FINAL FIX: Course Interest select alignment (Safari-safe) */
+.contact-form-card .input-wrap select#courseInterest {
+  display: block;
+  width: 100%;
+  height: 58px;
+  min-height: 58px;
+  box-sizing: border-box;
+  margin: 0;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding: 0 48px 0 54px !important;
+  font-size: 16px;
+  font-family: inherit;
+  font-weight: 400;
+  color: #111827;
+  line-height: normal !important;
+  background-color: #f3f4f6;
+  background-image:
+    linear-gradient(45deg, transparent 50%, #003366 50%),
+    linear-gradient(135deg, #003366 50%, transparent 50%);
+  background-position:
+    calc(100% - 22px) 50%,
+    calc(100% - 14px) 50%;
+  background-size: 8px 8px, 8px 8px;
+  background-repeat: no-repeat;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+.contact-form-card .input-wrap select#courseInterest option {
+  color: #111827;
+  background: #ffffff;
+}
+
+.contact-form-card .input-wrap select#courseInterest:focus {
+  outline: none;
+  border-color: var(--orange);
+  background-color: #ffffff;
+  box-shadow: 0 0 0 4px rgba(246, 139, 31, 0.14);
+}
+
+.contact-form-card .input-wrap:has(select#courseInterest) {
+  height: 58px;
+  display: flex;
+  align-items: center;
+}
+
+.contact-form-card .input-wrap:has(select#courseInterest) .field-icon {
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+  color: var(--orange);
+  z-index: 2;
+}
+
+
+/* Real course images replacing wireframe placeholders */
+.real-course-image-card {
+  padding: 0;
+  overflow: hidden;
+  background: transparent;
+  border: none;
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.12);
+}
+
+.course-detail-image {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 18px;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .course-detail-image {
+    height: 300px;
+  }
+}
+
+/* Download quote action */
+.download-quote-btn {
+  width: 100%;
+  margin-top: 10px;
+}
+

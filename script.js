@@ -67,10 +67,16 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
       <div class="quote-grand-total"><span>Total</span><strong>${currency(total)}</strong></div>
       <div class="quote-actions">
+        <button type="button" class="btn btn-primary download-quote-btn" id="download-quote">Download Quote</button>
         <a class="btn btn-primary" href="contact.html">Request This Quote →</a>
         <button type="button" class="btn clear-quote-btn" id="clear-quote">Clear Selection</button>
       </div>
     `;
+
+    const downloadButton = document.getElementById("download-quote");
+    if (downloadButton) {
+      downloadButton.addEventListener("click", () => downloadQuote(selected, subtotal, discountAmount, vat, total));
+    }
 
     const clearButton = document.getElementById("clear-quote");
     if (clearButton) {
@@ -79,6 +85,57 @@ document.addEventListener("DOMContentLoaded", () => {
         updateQuote();
       });
     }
+  }
+
+
+  function downloadQuote(selected, subtotal, discountAmount, vat, total) {
+    if (!selected || selected.length === 0) {
+      alert("Please select at least one course before downloading a quote.");
+      return;
+    }
+
+    const today = new Date().toLocaleDateString("en-ZA", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    });
+
+    const courseLines = selected
+      .map((course, index) => `${index + 1}. ${course.name} (${course.duration}) - ${currency(course.price)}`)
+      .join("\n");
+
+    const quoteContent = `EMPOWERING THE NATION
+Training Quotation
+Generated: ${today}
+
+Selected Courses
+----------------
+${courseLines}
+
+Pricing Summary
+---------------
+Subtotal: ${currency(subtotal)}
+Bulk Discount: - ${currency(discountAmount)}
+VAT (15%): ${currency(vat)}
+Total: ${currency(total)}
+
+Contact Details
+---------------
+Phone: +27 12 345 6789
+Email: info@empoweringthenation.co.za
+
+Thank you for choosing Empowering the Nation.
+Empowering Communities Through Education.
+`;
+
+    const blob = new Blob([quoteContent], { type: "text/plain;charset=utf-8" });
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = "empowering-the-nation-quote.txt";
+    document.body.appendChild(link);
+    link.click();
+    URL.revokeObjectURL(link.href);
+    document.body.removeChild(link);
   }
 
   checkboxes.forEach((box) => box.addEventListener("change", updateQuote));
